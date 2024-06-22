@@ -1,0 +1,9 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+echo "# R22-final" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/masterleafcnc/R22-final.git
+git push -u origin main
