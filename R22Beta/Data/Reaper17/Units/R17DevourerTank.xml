@@ -489,6 +489,7 @@
 				TiberiumStolenPerUpdate="1"
 				DelayBetweenThefts="0.15s"
 				TiberiumCapacity="20"
+				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
 				ObjectStatusWhenNotEmpty="HAS_TIBERIUM_AMMO DOES_CONTAIN_TIBERIUM"
 				ModelConditionWhenNotEmpty="USER_2"
 				StartRechargeOnExit="true" />
