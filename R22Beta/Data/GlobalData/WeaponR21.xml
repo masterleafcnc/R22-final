@@ -1,5 +1,245 @@
 <?xml version="1.0" encoding="us-ascii" ?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<!--
+<WeaponTemplate
+		id="AlienDevourerBeamLaser_SuperDuperTiberiumEnhanced"
+		Name="AlienDevourerBeamLaser_SuperDuperTiberiumEnhanced"
+		AttackRange="340.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_AlienChargedFire"
+		FireSound="Multisound:ALI_DevourerTank_BeamWeaponTiberiumEnhancedFireMS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		CanFireWhileMoving="true"
+		>
+		<FiringDuration
+			MinSeconds="2.0s"
+			MaxSeconds="2.0s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="1s"
+				LaserId="2"
+				HitGroundFX="FX_AlienTibLaserGroundHit"/>
+			<DamageNugget
+				Damage="800.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL"
+			 />
+			<SpendStolenTiberiumNugget
+				AmountToSpend="5"
+			/>
+		</Nuggets>
+	</WeaponTemplate>
+-->
+
+<WeaponTemplate
+			id="NeutralViceroidSpittleWeapon"
+			Name="NeutralViceroidSpittleWeapon"
+			AttackRange="50.0"
+			MinTargetPitch="-15d"
+			MaxTargetPitch="15d"
+			WeaponSpeed="300"
+			WeaponRecoil="0d"
+			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+			ClipSize="1"
+			FireSound="AudioEvent:ALI_Viceroid_Attack"
+			ShotsPerBarrel="1"
+			ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS">
+		<CoolDownDelayBetweenShots
+			MinSeconds="0.3s"
+			MaxSeconds="0.3s" />
+		<ClipReloadTime
+			MinSeconds="2.0s"
+			MaxSeconds="2.0s" />
+		<Nuggets>
+			<ProjectileNugget
+				ProjectileTemplate="NeutralViceroidSpittleWeaponProjectile"
+				WarheadTemplate="NeutralViceroidSpittleWeaponWarhead">
+				<SpecialObjectFilter
+					Rule="ALL">
+					<ExcludeThing>Viceroid</ExcludeThing>
+					<ExcludeThing>AlienCorrupter</ExcludeThing>
+					<ExcludeThing>Reaper17Corrupter</ExcludeThing>
+					<ExcludeThing>Traveler59Corrupter</ExcludeThing>
+					<ExcludeThing>AlienMillipedeHead</ExcludeThing>
+					<ExcludeThing>AlienMillipedeBody</ExcludeThing>
+				</SpecialObjectFilter>
+			</ProjectileNugget>
+			<SuppressionNugget
+				Radius="50.0"
+				Suppression="50"
+				DurationSeconds="2s">
+				<SpecialObjectFilter
+					Rule="ALL">
+					<ExcludeThing>Viceroid</ExcludeThing>
+					<ExcludeThing>AlienCorrupter</ExcludeThing>
+					<ExcludeThing>Reaper17Corrupter</ExcludeThing>
+					<ExcludeThing>Traveler59Corrupter</ExcludeThing>
+					<ExcludeThing>AlienMillipedeHead</ExcludeThing>
+					<ExcludeThing>AlienMillipedeBody</ExcludeThing>
+				</SpecialObjectFilter>
+			</SuppressionNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		  id="NeutralViceroidSpittleWeaponWarhead"
+		  Name="NeutralViceroidSpittleWeaponWarhead"
+		  ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+		  RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<DamageNugget
+				Damage="75.0"
+				DamageArc="30d"
+				Radius="100"
+				DamageTaperOff="0"
+				DelayTimeSeconds="0.0s"
+				DamageType="GRENADE"
+				DamageFXType="CLUBBING"
+				DeathType="NORMAL">
+				<DamageScalarDetails
+					 Scalar= "50%">
+					<Filter
+						Rule="ANY">
+						<IncludeThing>AlienAnnihilatorTripod</IncludeThing>
+						<IncludeThing>AlienAssimilator</IncludeThing>
+						<IncludeThing>AlienBuzzers</IncludeThing>
+						<IncludeThing>AlienCorrupter</IncludeThing>
+						<IncludeThing>AlienDevastatorWarship</IncludeThing>
+						<IncludeThing>AlienDevourerTank</IncludeThing>
+						<IncludeThing>AlienExplorer</IncludeThing>
+						<IncludeThing>AlienGunWalker</IncludeThing>
+						<IncludeThing>AlienHarvester</IncludeThing>
+						<IncludeThing>AlienInvaderFighter</IncludeThing>
+						<IncludeThing>AlienMastermind</IncludeThing>
+						<IncludeThing>AlienBlinkMastermind</IncludeThing>
+						<IncludeThing>AlienMCV</IncludeThing>
+						<IncludeThing>AlienMothership</IncludeThing>
+						<IncludeThing>AlienPlanetaryAssaultCarrier</IncludeThing>
+						<IncludeThing>AlienRazorDrones</IncludeThing>
+						<IncludeThing>AlienRazorDroneSquad</IncludeThing>
+						<IncludeThing>AlienStalker</IncludeThing>
+						<IncludeThing>AlienStalkerSquad</IncludeThing>
+						<IncludeThing>AlienSeekerTank</IncludeThing>
+						<IncludeThing>AlienShockTrooper</IncludeThing>
+						<IncludeThing>AlienShockTrooperSquad</IncludeThing>
+						<IncludeThing>AlienStormrider</IncludeThing>
+						<IncludeThing>Reaper17AnnihilatorTripod</IncludeThing>
+						<IncludeThing>Reaper17Corrupter</IncludeThing>
+						<IncludeThing>Reaper17DevourerTank</IncludeThing>
+						<IncludeThing>Reaper17Explorer</IncludeThing>
+						<IncludeThing>Reaper17GunWalker</IncludeThing>
+						<IncludeThing>Reaper17Harvester</IncludeThing>
+						<IncludeThing>Reaper17MCV</IncludeThing>
+						<IncludeThing>Reaper17Stalker</IncludeThing>
+						<IncludeThing>Reaper17StalkerSquad</IncludeThing>
+						<IncludeThing>Reaper17SeekerTank</IncludeThing>
+						<IncludeThing>Reaper17ShockTrooper</IncludeThing>
+						<IncludeThing>Reaper17ShockTrooperSquad</IncludeThing>
+						<IncludeThing>Reaper17Stormrider</IncludeThing>
+						<IncludeThing>Traveler59AnnihilatorTripod</IncludeThing>
+						<IncludeThing>Traveler59Assimilator</IncludeThing>
+						<IncludeThing>Traveler59Corrupter</IncludeThing>
+						<IncludeThing>Traveler59DevastatorWarship</IncludeThing>
+						<IncludeThing>Traveler59DevourerTank</IncludeThing>
+						<IncludeThing>Traveler59Explorer</IncludeThing>
+						<IncludeThing>Traveler59GunWalker</IncludeThing>
+						<IncludeThing>Traveler59Harvester</IncludeThing>
+						<IncludeThing>Traveler59BlinkMastermind</IncludeThing>
+						<IncludeThing>Traveler59MCV</IncludeThing>
+						<IncludeThing>Traveler59Mothership</IncludeThing>
+						<IncludeThing>Traveler59PlanetaryAssaultCarrier</IncludeThing>
+						<IncludeThing>Traveler59RazorDrone</IncludeThing>
+						<IncludeThing>Traveler59RazorDroneSquad</IncludeThing>
+						<IncludeThing>Traveler59Stalker</IncludeThing>
+						<IncludeThing>Traveler59StalkerSquad</IncludeThing>
+						<IncludeThing>Traveler59SeekerTank</IncludeThing>
+						<IncludeThing>Traveler59ShockTrooper</IncludeThing>
+						<IncludeThing>Traveler59ShockTrooperSquad</IncludeThing>
+						<IncludeThing>Traveler59Stormrider</IncludeThing>
+					</Filter>
+				</DamageScalarDetails>
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+
+<WeaponTemplate
+		id="AlienDevourerBeamLaser_TiberiumEnhanced"
+		Name="AlienDevourerBeamLaser_TiberiumEnhanced"
+		AttackRange="340.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_AlienChargedFire"
+		FireSound="Multisound:ALI_DevourerTank_BeamWeaponTiberiumEnhancedFireMS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		CanFireWhileMoving="true"
+		>
+		<FiringDuration
+			MinSeconds="2.0s"
+			MaxSeconds="2.0s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="1s"
+				LaserId="2"
+				HitGroundFX="FX_AlienTibLaserGroundHit"/>
+			<DamageNugget
+				Damage="800.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL"
+			 />
+			<SpendStolenTiberiumNugget
+				AmountToSpend="1"
+			/>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	
+
+<!-- AVATAR COMMANDEER RANGE BUFF -->
+	
+	<WeaponTemplate
+		id="NODAvatarCommandeerWeapon"
+		Name="NODAvatarCommandeerWeapon"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AttackRange="35.0"
+		WeaponSpeed="999999.0"
+ 		>
+		<!-- This is the weapon for the Avatar to kill its target object via Commandeer-->
+		<Nuggets>
+			<DamageNugget
+				Damage="10000.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL" >
+			</DamageNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="NODAvatarCommandeerParalyzeWeapon"
+		Name="NODAvatarCommandeerParalyzeWeapon"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AttackRange="35.0"
+		WeaponSpeed="999999.0"
+ 		>
+		<!-- This is the weapon for the Avatar to paralyze its target before stealing its weapon-->
+		<Nuggets>
+			<ParalyzeNugget
+				Radius="10.0"
+				DurationSeconds="3s"
+				ParalyzeType="USER_PARALYZE">
+			</ParalyzeNugget>
+		</Nuggets>
+	</WeaponTemplate>	
 
 <!-- redeemer and marv weapons -->
 
@@ -1648,12 +1888,17 @@
 	<FiringDuration
 	  MinSeconds="0.1s"
 	  MaxSeconds="0.1s" />
+	  <!--
    <PreAttackDelay
 	  MinSeconds="1.75s"
 	  MaxSeconds="1.75s" />
+	  -->
+  <PreAttackDelay
+	  MinSeconds="3s"
+	  MaxSeconds="3s" />
 	<Nuggets>	
 		<AttributeModifierNugget
-			Radius="10000.0"
+			Radius="10607.0"
 			PartitionFilterTestType="CIRCLE"
 			ForbiddenTargetModelCondition="USER_69"
 			RequiredObjectStatus="RIDER1"
@@ -4700,7 +4945,7 @@
 				DamageType="CANNON"
 				DamageFXType="GDI_MACHINEGUN"
 				DeathType="NORMAL">
-				<DamageScalarDetails Scalar= "65%">
+				<DamageScalarDetails Scalar= "50%">
 					<Filter Rule="NONE">
 						<IncludeThing>NODStealthTank</IncludeThing>
 						<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>

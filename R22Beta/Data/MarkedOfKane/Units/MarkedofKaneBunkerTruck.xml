@@ -102,7 +102,7 @@
 			DamageFX="VehicleDamageFX"
 			Conditions="PLAYER_UPGRADE" />
 		<LocomotorSet
-			Speed="105"
+			Speed="112"
 			Condition="NORMAL"
 			Locomotor="NODReckonerLocomotor" />
 		<LocomotorSet

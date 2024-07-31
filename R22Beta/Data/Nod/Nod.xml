@@ -6,15 +6,16 @@
 			<Include source="Units/NodRedeemer.xml" type="all"/>
 			<Include source="Units/NODVenom.xml" type="all"/>
 			<Include source="Units/nodbeamcannon.xml" type="all"/>
+			<Include source="Units/NODHarvester.xml" type="all"/>
+			<Include source="Units/NodBunkerTruck.xml" type="all"/>
+			<Include source="Units/NodAvatar.xml" type="all"/>
+			<Include source="Units/NodMilitantRocketSquad.xml" type="all"/>
 			<!--
 			<Include source="Structures/NodPowerPlant.xml" type="all"/>
 	
-		<Include source="Units/NodBunkerTruck.xml" type="all"/>
 		<Include source="Structures/NODPropagandaTower.xml" type="all"/>
 		<Include source="Units/NODScorpionBuggy.xml" type="all"/>
 		<Include source="Units/nodstealthtank.xml" type="all"/>
-		<Include source="Units/NODHarvester.xml" type="all"/>
-		<Include source="Units/NodAvatar.xml" type="all"/>
 		<Include source="Structures/NODTempleOfNod.xml" type="all"/> 
 		<Include source="props/nodbeamtarget.xml" type="all"/>
 		<Include source="Units/NODCyborg.xml" type="all"/>
@@ -28,7 +29,6 @@
 		<Include source="Structures/NODHangar.xml" type="all"/>		
 		<Include source="Units/NODEmissary.xml" type="all"/>
 		<Include source="Structures/NODMiniMCVOutpost.xml" type="all"/>
-		<Include source="Units/NodMilitantRocketSquad.xml" type="all"/>
 		<Include source="Units/NODShadowSquad.xml" type="all"/>
 		<Include source="Units/NODShadowSquad_Veteran.xml" type="all"/>
 		<Include source="Units/NODMilitantSquad.xml" type="all"/>

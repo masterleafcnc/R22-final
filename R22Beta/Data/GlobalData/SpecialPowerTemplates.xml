@@ -543,8 +543,244 @@
 
 <!-- AVATAR FIX -->
 
-<!-- beam cannon -->
-
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarInvisibility"
+		Flags="NEEDS_OBJECT_FILTER LIMIT_DISTANCE TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="USER_PARALYZED"
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		TargetType="OBJECT">
+		<ObjectFilter>
+			<IncludeThing>NODStealthTank</IncludeThing>
+			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarStealthDetect"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="USER_PARALYZED"
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		TargetType="OBJECT">
+		<ObjectFilter>
+			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+			<IncludeThing>NODAttackBike</IncludeThing>
+			<IncludeThing>BlackHandAttackBike</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarFlamer"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="USER_PARALYZED"
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		TargetType="OBJECT">
+		<ObjectFilter>
+			<IncludeThing>NODFlameTank</IncludeThing>
+			<IncludeThing>BlackHandFlameTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarBeamCannon"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		RequiredTargetObjectStatus="USER_PARALYZED"
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		TargetType="OBJECT">
+		<ObjectFilter>
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	
+	<!--Avatar Commandeer Paralyze Templates-->
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerParalyzeBeamCannon"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		<ObjectFilter>
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerParalyzeBike"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		<ObjectFilter>
+			<IncludeThing>NODAttackBike</IncludeThing>
+			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+			<IncludeThing>BlackHandAttackBike</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerParalyzeStealthTank"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		<ObjectFilter>
+			<IncludeThing>NODStealthTank</IncludeThing>
+			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerParalyzeFlameTank"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		<ObjectFilter>
+			<IncludeThing>NODFlameTank</IncludeThing>
+			<IncludeThing>BlackHandFlameTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerGetInRangeBeam"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		WaypointModeTerminal="false">
+		<ObjectFilter>
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerGetInRangeFlame"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		WaypointModeTerminal="false">
+		<ObjectFilter>
+			<IncludeThing>NODFlameTank</IncludeThing>
+			<IncludeThing>BlackHandFlameTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerGetInRangeBike"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		WaypointModeTerminal="false">
+		<ObjectFilter>
+			<IncludeThing>NODAttackBike</IncludeThing>
+			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+			<IncludeThing>BlackHandAttackBike</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerGetInRangeStealth"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		WaypointModeTerminal="false">
+		<ObjectFilter>
+			<IncludeThing>NODStealthTank</IncludeThing>
+			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerDestroyBeamCannon"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter>
+			<IncludeThing>NODBeamCannon</IncludeThing>
+			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
+			<IncludeThing>BlackHandBeamCannon</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerDestroyBike"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter>
+			<IncludeThing>NODAttackBike</IncludeThing>
+			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
+			<IncludeThing>BlackHandAttackBike</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarStealthDetect</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerDestroyStealthTank"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter>
+			<IncludeThing>NODStealthTank</IncludeThing>
+			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPower_AvatarCommandeerDestroyFlameTank"
+		TargetType="OBJECT"
+		MaxCastRange="100"
+		Flags="NEEDS_OBJECT_FILTER">
+		<ObjectFilter>
+			<IncludeThing>NODFlameTank</IncludeThing>
+			<IncludeThing>BlackHandFlameTank</IncludeThing>
+		</ObjectFilter>
+		<GameDependency>
+			<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	
+<!--
 <SpecialPowerTemplate
 	id="SpecialPower_AvatarCommandeerGetInRangeBeam"
 	TargetType="OBJECT"
@@ -583,7 +819,7 @@
 		id="SpecialPower_AvatarCommandeerParalyzeBeamCannon"
 		TargetType="OBJECT"
 		MaxCastRange="100"
-		DisallowedTargetModelStates="DYING RUBBLE MOVING PARALYZED"
+		DisallowedTargetModelStates="DYING RUBBLE PARALYZED"
 		Flags="NEEDS_OBJECT_FILTER NO_FORBIDDEN_MODEL_STATES"
 		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED">
 		<ObjectFilter>
@@ -595,9 +831,6 @@
 			<ForbiddenUpgrade>Upgrade_AvatarBeamCannon</ForbiddenUpgrade>
 		</GameDependency>
 	</SpecialPowerTemplate>
-	
-	
-<!-- flame tank -->
 	
 <SpecialPowerTemplate
 	id="SpecialPower_AvatarCommandeerGetInRangeFlame"
@@ -646,8 +879,6 @@
 		<ForbiddenUpgrade>Upgrade_AvatarFlamer</ForbiddenUpgrade>
 	</GameDependency>
 </SpecialPowerTemplate>
-	
-<!-- bike -->
 
 <SpecialPowerTemplate
 	id="SpecialPower_AvatarCommandeerGetInRangeBike"
@@ -700,7 +931,6 @@
 	</GameDependency>
 </SpecialPowerTemplate>
 
-<!-- stealth tank -->
 
 <SpecialPowerTemplate
 	id="SpecialPower_AvatarCommandeerGetInRangeStealth"
@@ -749,6 +979,7 @@
 		<ForbiddenUpgrade>Upgrade_AvatarInvisibility</ForbiddenUpgrade>
 	</GameDependency>
 </SpecialPowerTemplate>
+-->
 
 <!-- END OF AVATAR FIX -->
 

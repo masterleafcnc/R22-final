@@ -661,8 +661,8 @@
 			IsRotatingWithObject="True"
 			LocalPlayerOnly="False" />
 		<VisionInfo
-			VisionRange="100"
-			ShroudClearingRange="0"
+			VisionRange="250"
+			ShroudClearingRange="300"
 			VisionSide="100%"
 			VisionRear="100%"
 			VisionBonusTestRadius="100"
@@ -678,7 +678,7 @@
 			CrushWeapon=""
 			CrushRevengeWeapon=""
 			CrusherLevel="0"
-			CrushableLevel="0"
+			CrushableLevel="1"
 			MountedCrusherLevel="255"
 			MountedCrushableLevel="255"
 			CrushEqualLevelProps="False"

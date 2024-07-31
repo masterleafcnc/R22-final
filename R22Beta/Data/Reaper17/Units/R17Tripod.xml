@@ -2148,7 +2148,6 @@
 				StatusToClear=""
 				ApplyToContained="False">
 				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
-				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
 			</StatusBitsUpgrade>
 			<ModelConditionUpgrade
 				id="CA3FFA4F"
@@ -2194,12 +2193,14 @@
 						Upgrade=""
 						ObjectStatus="HAS_TIBERIUM_AMMO"
 						IsPlayerUpgradePermanent="False" />
+						<!--
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="Reaper17TripodPulseCannonA_SuperDuperTiberiumEnhanced"
 						Upgrade=""
 						ObjectStatus="HAS_TIBERIUM_AMMO WEAPON_UPGRADED_02"
 						IsPlayerUpgradePermanent="False" />
+						-->
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="40"
@@ -2247,12 +2248,14 @@
 						Upgrade=""
 						ObjectStatus="HAS_TIBERIUM_AMMO"
 						IsPlayerUpgradePermanent="False" />
+						<!--
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="Reaper17TripodPulseCannonB_SuperDuperTiberiumEnhanced"
 						Upgrade=""
 						ObjectStatus="HAS_TIBERIUM_AMMO WEAPON_UPGRADED_02"
 						IsPlayerUpgradePermanent="False" />
+						-->
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="40"
@@ -2300,12 +2303,14 @@
 						Upgrade=""
 						ObjectStatus="HAS_TIBERIUM_AMMO"
 						IsPlayerUpgradePermanent="False" />
+						<!--
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="Reaper17TripodPulseCannonC_SuperDuperTiberiumEnhanced"
 						Upgrade=""
 						ObjectStatus="HAS_TIBERIUM_AMMO WEAPON_UPGRADED_02"
 						IsPlayerUpgradePermanent="False" />
+						-->
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="40"
@@ -2468,12 +2473,36 @@
 				StartRechargeOnExit="True"
 				GoIdleInStartPreparation="True"
 				FaceTarget="True"
-				TiberiumStolenPerUpdate="10"
+				TiberiumStolenPerUpdate="1"
 				DelayBetweenThefts="0.3s"
-				TiberiumCapacity="100"
+				TiberiumCapacity="10"
 				ObjectStatusWhenNotEmpty="DOES_CONTAIN_TIBERIUM HAS_TIBERIUM_AMMO"
 				ModelConditionWhenNotEmpty="USER_2"
 				PlayWeaponPreFireFX="False" />
+				
+			<SpecialPower
+				id="ModuleTag_TiberiumThiefSpecialPowerUpgraded"
+				SpecialPowerTemplate="SpecialPower_ConversionBeamUpgraded"
+				UpdateModuleStartsAttack="true" />				
+			<TiberiumThiefSpecialAbilityUpdate
+				id="ModuleTag_TiberiumThiefWithReservesUpdate"
+				SpecialPowerTemplate="SpecialPower_ConversionBeamUpgraded"
+				UnpackTime="0.1s"
+				UnpackSound="AudioEvent:ALI_DevourerTank_ConversionBeamFire"
+				PersistentPrepTime="10000s"
+				StartAbilityRange="75"
+				TiberiumStolenPerUpdate="1"
+				DelayBetweenThefts="0.15s"
+				TiberiumCapacity="20"
+				ObjectStatusWhenNotEmpty="HAS_TIBERIUM_AMMO DOES_CONTAIN_TIBERIUM"
+				ModelConditionWhenNotEmpty="USER_2"
+				StartRechargeOnExit="true"/>								
+			<CommandSetUpgrade
+				id="ModuleTag_SwapCommandSet"
+				CommandSet="Reaper17AnnihilatorTripodConversionUpgradeCommandSet"
+				Permanent="true">
+				<TriggeredBy>Upgrade_Reaper17ConversionReserves</TriggeredBy>
+			</CommandSetUpgrade>			
 			<StatusBitsUpgrade
 				id="6886AC52"
 				RequiresAllTriggers="False"
@@ -2486,6 +2515,7 @@
 				ApplyToContained="False">
 				<TriggeredBy>Upgrade_Reaper17ReactorForcefieldGenerator</TriggeredBy>
 			</StatusBitsUpgrade>
+			<!--
 			<StatusBitsUpgrade
 				id="E6191BDE"
 				RequiresAllTriggers="False"
@@ -2498,6 +2528,7 @@
 				ApplyToContained="False">
 				<TriggeredBy>Upgrade_Reaper17ConversionReserves</TriggeredBy>
 			</StatusBitsUpgrade>
+			-->
 			<SubObjectsUpgrade
 				id="CE26157E"
 				RequiresAllTriggers="False"

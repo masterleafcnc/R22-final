@@ -28,6 +28,12 @@
         id="Command_FireTiberiumAgitation">
     <SpecialPower>SpecialPower_UseTiberiumAgitation</SpecialPower>
   </LogicCommand>
+  
+  <LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_UpgradedConversionBeam">
+    <SpecialPower>SpecialPower_ConversionBeamUpgraded</SpecialPower>
+  </LogicCommand>
   <!--
   <LogicCommand
 		Options="NEED_TARGET_POS"
@@ -56,7 +62,14 @@
     <SpecialPower>SpecialPowerMastermindTeleportObject</SpecialPower>
   </LogicCommand>
   -->
-  
+  <!--
+   <LogicCommand
+		Options="NEED_TARGET_ALLY_OBJECT"
+		Type="SPECIAL_POWER"
+		id="Command_AvatarCommandeerParalyzeBeamCannon">
+	<SpecialPower>SpecialPower_AvatarCommandeerParalyzeBeamCannonEMP</SpecialPower>
+  </LogicCommand>
+  -->
   <LogicCommand
 		Options="NEED_TARGET_POS"
 		Type="SPECIAL_POWER"

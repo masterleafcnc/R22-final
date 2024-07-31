@@ -8,6 +8,7 @@
 		<Include source="Structures/MutantHovel.xml" type="all"/>
 		<Include source="Units/alieneradicatorhexapod.xml" type="all"/> 
 		<Include source="Units/AlienWormHole.xml" type="all"/> 
+		<Include source="Units/AlienDevourerTank.xml" type="all"/> 
 		<!--
 	
 		<Include source="Structures/AlienGateway.xml" type="all"/>
@@ -41,7 +42,6 @@
 		<Include source="Units/AlienMCV.xml" type="all"/>
 		<Include source="Units/AlienBuzzers_Slaved.xml" type="all"/> 
 		<Include source="Units/AlienDevastatorWarship.xml" type="all"/> 
-		<Include source="Units/AlienDevourerTank.xml" type="all"/> 
 		<Include source="Props/AlienTibAgitationProjectile.xml" type="all"/>
 		<Include source="Units/AlienMillipedeBody.xml" type="all"/>
 		<Include source="Units/AlienCustomizableVehicle.xml" type="all"/> 

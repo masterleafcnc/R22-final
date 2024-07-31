@@ -2799,6 +2799,7 @@
 				PlayWeaponPreFireFX="False"
 				OffsetTargetLocationFromObject="False"
 				DestealthClosestObjectMatchingFilter="False" />
+				
 			<SpecialPower
 				id="33854295"
 				SpecialPowerTemplate="SpecialPower_AvatarCommandeerParalyzeBike"
@@ -3253,7 +3254,7 @@
 				PackTime="0s"
 				UnpackTime="0s"
 				PreTriggerUnstealthTime="0s"
-				Options=""
+				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
 				PackUnpackVariationFactor="0"
 				ParalyzeDurationWhenCompleted="0s"
 				ParalyzeDurationWhenAborted="0s"
@@ -3300,7 +3301,7 @@
 				PackTime="0s"
 				UnpackTime="0s"
 				PreTriggerUnstealthTime="0s"
-				Options=""
+				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
 				PackUnpackVariationFactor="0"
 				ParalyzeDurationWhenCompleted="0s"
 				ParalyzeDurationWhenAborted="0s"
@@ -3347,7 +3348,7 @@
 				PackTime="0s"
 				UnpackTime="0s"
 				PreTriggerUnstealthTime="0s"
-				Options=""
+				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
 				PackUnpackVariationFactor="0"
 				ParalyzeDurationWhenCompleted="0s"
 				ParalyzeDurationWhenAborted="0s"
@@ -3394,7 +3395,7 @@
 				PackTime="0s"
 				UnpackTime="0s"
 				PreTriggerUnstealthTime="0s"
-				Options=""
+				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
 				PackUnpackVariationFactor="0"
 				ParalyzeDurationWhenCompleted="0s"
 				ParalyzeDurationWhenAborted="0s"

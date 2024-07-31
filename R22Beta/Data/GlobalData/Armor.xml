@@ -136,6 +136,29 @@
 			Percent="100%"/>
 	</ArmorTemplate>	
 	-->
+	
+	<ArmorTemplate
+		id="NeutralViceroidArmor"
+		Default="100"
+		SideDamageScalar="100"
+		RearDamageScalar="100">
+		<Armor
+			Damage="SNIPER"
+			Percent="25" />
+		<Armor
+			Damage="CANNON"
+			Percent="50" />
+		<Armor
+			Damage="ROCKET"
+			Percent="25" />
+		<Armor
+			Damage="GRENADE"
+			Percent="75" />
+		<Armor
+			Damage="GUN"
+			Percent="100" />
+	</ArmorTemplate>
+	
 	<ArmorTemplate
 		id="NODEnlightenedArmor"
 		Default="100%"

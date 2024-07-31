@@ -143,8 +143,47 @@
 		MaximumWheelCompression="1.75"
 		WheelTurnAngle="35d"
 		/>
-	-->
+	-->	
+		<LocomotorTemplate
+		id="GDIDropshipLocomotor"
+		Name="GDIDropshipLocomotor"
+		Surfaces="AIR" 
+		TurnTimeSeconds="2.0s" 
+		TurnTimeDamagedSeconds="2.0s" 
+		AccelerationSeconds="1.0s"
+		Lift="120%"
+		LiftDamaged="80%"
+		BrakingSeconds="1.0s"
+		MinTurnSpeed="0%"
+		SlowTurnRadius="0.0" 
+		FastTurnRadius="50.0" 
+		PreferredHeight="140"
+		AllowMotiveForceWhileAirborne="true"
+		BehaviorZ="SURFACE_RELATIVE_HEIGHT"	
+		Appearance="HOVER" 
+		
+		PitchStiffness="0.5"
+		RollStiffness="0.1"
+		PitchDamping="0.9"
+		RollDamping="0.9"
+		ForwardVelocityPitchFactor="-0.2"
+		LateralVelocityRollFactor="0.1"
+		Apply2DFrictionWhenAirborne="true"
+		AirborneTargetingHeight="30"
+		LocomotorWorksWhenDead="true"
+			
+		TakeOffAndLandingSpeed="6.0"
+		TakeOffAndLandingSlowDownDelta="35.0"
+		TakeOffAndLandingSlowDownTime="1.5s"
 
+		RudderCorrectionDegree="0.169"
+		RudderCorrectionRate="0.027"
+		ElevatorCorrectionDegree="0.103"
+		ElevatorCorrectionRate="0.016"
+		CanMoveBackward="false"
+
+		/>
+<!--
 		<LocomotorTemplate
 		id="GDIDropshipLocomotor"
 		Name="GDIDropshipLocomotor"
@@ -182,7 +221,7 @@
 		ElevatorCorrectionDegree="0.103"
 		ElevatorCorrectionRate="0.016"
 		CanMoveBackward="false" />
-		
+		-->
 
 		<LocomotorTemplate
         id="AlienMCVLocomotor"

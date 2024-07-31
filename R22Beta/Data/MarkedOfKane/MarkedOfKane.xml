@@ -4,9 +4,11 @@
 	<Includes>
 		<Include source="Units/MoKRedeemer.xml" type="all"/>
 		<Include source="Units/MoKVenom.xml" type="all"/>  
+		<Include source="Units/MarkedofKaneBunkerTruck.xml" type="all"/>
+		<Include source="Units/MoKAvatar.xml" type="all"/> 
+		<Include source="Units/MarkedOfKaneMilitantRocketSquad.xml" type="all"/> 
 <!--
-		<Include source="Units/markedofkanebeamcannon.xml" type="all"/> 
-		<Include source="Units/MarkedofKaneBunkerTruck.xml" type="all"/> 
+		<Include source="Units/markedofkanebeamcannon.xml" type="all"/>  
 		<Include source="Structures/MoKPowerPlant.xml" type="all" /> 
 		<Include source="Units/MOKAwakenedSquad.xml" type="all"/>	
 		<Include source="Units/MoKHarvester.xml" type="all"/>
@@ -14,12 +16,10 @@
 		<Include source="Units/markedofkanesaboteur.xml" type="all"/> 
 		<Include source="Structures/MarkedOfKaneTiberiumSilo.xml" type="all" /> 
 		<Include source="Units/markedofkanevertigo.xml" type="all"/>
-		<Include source="Units/MoKAvatar.xml" type="all"/> 
 		<Include source="Units/markedofkanemcv.xml" type="all"/>
 		<Include source="Structures/MoKHangar.xml" type="all"/>
 		<Include source="Structures/MoKMiniMCVOutpost.xml" type="all"/>
 		<Include source="Units/MoKEmissary.xml" type="all"/>
-		<Include source="Units/MarkedOfKaneMilitantRocketSquad.xml" type="all"/> 
 		<Include source="Units/MOKShadowSquad.xml" type="all"/> 
 		<Include source="Units/MOKShadowSquad_Veteran.xml" type="all"/> 
 		<Include source="Units/MarkedOfKaneFanaticSquad.xml" type="all"/> 
