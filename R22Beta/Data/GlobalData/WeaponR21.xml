@@ -1955,10 +1955,11 @@
    <PreAttackDelay
 	  MinSeconds="1.75s"
 	  MaxSeconds="1.75s" />
-	  -->
-  <PreAttackDelay
-	  MinSeconds="3s"
-	  MaxSeconds="3s" />
+	 
+    -->
+	<PreAttackDelay
+	  MinSeconds="2s"
+	  MaxSeconds="2s" />
 	<Nuggets>	
 		<AttributeModifierNugget
 			Radius="10607.0"

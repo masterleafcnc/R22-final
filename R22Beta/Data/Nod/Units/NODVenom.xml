@@ -498,7 +498,7 @@
 				<FireWeaponNugget
 					WeaponName="ReflectorWeapon2"
 					FireDelay="0s"
-					FireInterval="0s"
+					FireInterval="0.4s"
 					OneShot="False" />
 			</FireWeaponUpdate>
 			
