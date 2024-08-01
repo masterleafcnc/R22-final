@@ -4747,8 +4747,8 @@
 			MaxSeconds="0.0s"
 		/>
 		<FiringDuration
-			MinSeconds="0.1s"
-			MaxSeconds="0.1s"
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s"
 		/>
 		<Nuggets>
 			<AttributeModifierNugget
@@ -4810,8 +4810,8 @@
 			MaxSeconds="0.0s"
 		/>
 		<FiringDuration
-			MinSeconds="0.1s"
-			MaxSeconds="0.1s"
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s"
 		/>
 		<Nuggets>
 			<AttributeModifierNugget
