@@ -7,6 +7,8 @@
 
 	<!-- MAMMOTH RGA FIX <Modifier Type="RATE_OF_FIRE" Value="100%"/> -->
 	
+	
+	
 	<AttributeModifier
 		id="AttributeModifier_RailgunAccelerator"
 		Category="NONE"

@@ -433,13 +433,11 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="AlienDevourerBeamLaser_TiberiumEnhanced"
-						ObjectStatus="HAS_TIBERIUM_AMMO" />
-					<!--
+						ObjectStatus="HAS_TIBERIUM_AMMO" />		
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="AlienDevourerBeamLaser_SuperDuperTiberiumEnhanced"
 						ObjectStatus="HAS_TIBERIUM_AMMO WEAPON_UPGRADED_02" />	
-					-->
 					<TurretSettings
 						TurretTurnRate="200"
 						TurretPitchRate="40"
@@ -467,32 +465,14 @@
 				UnpackSound="AudioEvent:ALI_DevourerTank_ConversionBeamFire"
 				PersistentPrepTime="10000s"
 				StartAbilityRange="75"
-				TiberiumStolenPerUpdate="1"
+				TiberiumStolenPerUpdate="10"
 				DelayBetweenThefts="0.30s"
-				TiberiumCapacity="10"
+				TiberiumCapacity="100"
 				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
 				ObjectStatusWhenNotEmpty="HAS_TIBERIUM_AMMO DOES_CONTAIN_TIBERIUM"
 				ModelConditionWhenNotEmpty="USER_2"
 				StartRechargeOnExit="true" />		
-				
-			<SpecialPower
-				id="ModuleTag_TiberiumThiefSpecialPowerUpgraded"
-				SpecialPowerTemplate="SpecialPower_ConversionBeamUpgraded"
-				UpdateModuleStartsAttack="true" />
-			<TiberiumThiefSpecialAbilityUpdate
-				id="ModuleTag_TiberiumThiefWithReservesUpdate"
-				SpecialPowerTemplate="SpecialPower_ConversionBeamUpgraded"
-				UnpackTime="0.1s"
-				UnpackSound="AudioEvent:ALI_DevourerTank_ConversionBeamFire"
-				PersistentPrepTime="10000s"
-				StartAbilityRange="75"
-				TiberiumStolenPerUpdate="1"
-				DelayBetweenThefts="0.15s"
-				TiberiumCapacity="20"
-				Options="CHECK_SPECIALPOWER_REQUIREMENTS_DURING_UPDATE"
-				ObjectStatusWhenNotEmpty="HAS_TIBERIUM_AMMO DOES_CONTAIN_TIBERIUM"
-				ModelConditionWhenNotEmpty="USER_2"
-				StartRechargeOnExit="true" />
+		
 			<Physics
 				id="ModuleTag_Physics" />
 			<SlowDeath
@@ -535,14 +515,7 @@
 				CommandButtonName="Command_DevourerTankConversionBeam"
 				SpecialPowerAIType="SPECIAL_POWER_AOE_BUFF"
 				SpecialPowerRadius="100" 
-				MinimumCutoff="5" />
-			
-			<CommandSetUpgrade
-				id="ModuleTag_SwapCommandSet"
-				CommandSet="Reaper17DevourerTankCommandSet"
-				Permanent="true">
-				<TriggeredBy>Upgrade_Reaper17ConversionReserves</TriggeredBy>
-			</CommandSetUpgrade>							
+				MinimumCutoff="5" />						
 				
 			<SubObjectsUpgrade
 				id="ModuleTag_ShowDevourerConversionReserveTanks"
@@ -555,13 +528,13 @@
 				StatusToSet="WEAPON_UPGRADED_01">
 				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
 			</StatusBitsUpgrade>
-		<!--
+	
 			<StatusBitsUpgrade
 				id="ModuleTag_UpgradeWeapon"
 				StatusToSet="WEAPON_UPGRADED_02">
 				<TriggeredBy>Upgrade_Reaper17ConversionReserves</TriggeredBy>
 			</StatusBitsUpgrade>
-			-->
+		
 			<AISpecialPowerUpdate
 				id="ModuleTag_AlienDevourerUpgradedConversionAI"
 				CommandButtonName="Command_UpgradedConversionBeam"

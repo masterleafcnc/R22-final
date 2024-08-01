@@ -3,8 +3,8 @@
 
 	<Includes>
 		<Include source="Units/R17DevourerTank.xml" type="all"/>
-		<Include source="Units/R17Tripod.xml" type="all"/>	
 		<!--
+		<Include source="Units/R17Tripod.xml" type="all"/>	
 		<Include source="Units/r17eradicatorhexapod.xml" type="all"/>	
 
 		<Include source="Structures/R17Gateway.xml" type="all"/>

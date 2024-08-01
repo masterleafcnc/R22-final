@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="us-ascii" ?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+
 <WeaponTemplate
 		id="AlienDevourerBeamLaser_TiberiumEnhanced"
 		Name="AlienDevourerBeamLaser_TiberiumEnhanced"
@@ -29,7 +30,140 @@
 				DeathType="NORMAL"
 			 />
 			<SpendStolenTiberiumNugget
-				AmountToSpend="1"
+				AmountToSpend="10"
+			/>
+		</Nuggets>
+</WeaponTemplate>
+	
+<WeaponTemplate
+		id="AlienDevourerBeamLaser_SuperDuperTiberiumEnhanced"
+		Name="AlienDevourerBeamLaser_SuperDuperTiberiumEnhanced"
+		AttackRange="340.0"
+		WeaponSpeed="999999.0"
+		FireFX="FX_AlienChargedFire"
+		FireSound="Multisound:ALI_DevourerTank_BeamWeaponTiberiumEnhancedFireMS"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		CanFireWhileMoving="true"
+		>
+		<FiringDuration
+			MinSeconds="2.0s"
+			MaxSeconds="2.0s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="1s"
+				LaserId="2"
+				HitGroundFX="FX_AlienTibLaserGroundHit" />
+			<DamageNugget
+				Damage="800.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.5s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL"
+			 />
+			<SpendStolenTiberiumNugget
+				AmountToSpend="5"
+			/>
+		</Nuggets>
+</WeaponTemplate>
+	
+<WeaponTemplate
+		id="Reaper17TripodPulseCannonA_SuperDuperTiberiumEnhanced"
+		Name="Reaper17TripodPulseCannonA_SuperDuperTiberiumEnhanced"
+		AttackRange="350.0"
+		WeaponSpeed="400.0"
+		FireFX="FX_AlienChargedFire"
+		FireSound="Multisound:ALI_ReaperTripod_ConversionBeamWeaponFireMS"
+		MinTargetPitch="-15d"
+		MaxTargetPitch="15d"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		CanFireWhileMoving="true"
+		>
+		<FiringDuration
+			MinSeconds="1.75s"
+			MaxSeconds="1.75s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="1s"
+				LaserId="4"
+				HitGroundFX="FX_AlienTibLaserGroundHit"/>
+			<DamageNugget
+				Damage="700.0"
+				Radius="0.0"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL"
+			 />
+			<SpendStolenTiberiumNugget
+				AmountToSpend="5"
+			/>
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="Reaper17TripodPulseCannonB_SuperDuperTiberiumEnhanced"
+		Name="Reaper17TripodPulseCannonB_SuperDuperTiberiumEnhanced"
+		AttackRange="350.0"
+		WeaponSpeed="400.0"
+		FireFX="FX_AlienChargedFire"
+		FireSound="Multisound:ALI_ReaperTripod_ConversionBeamWeaponFireMS"
+		MinTargetPitch="-15d"
+		MaxTargetPitch="15d"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		CanFireWhileMoving="true"
+		>
+		<FiringDuration
+			MinSeconds="1.75s"
+			MaxSeconds="1.75s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="1s"
+				LaserId="5"
+				HitGroundFX="FX_AlienTibLaserGroundHit"/>
+			<DamageNugget
+				Damage="700.0"
+				Radius="0.0"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL"
+			 />
+			<SpendStolenTiberiumNugget
+				AmountToSpend="5"
+			/>
+		</Nuggets>
+	</WeaponTemplate>
+	<WeaponTemplate
+		id="Reaper17TripodPulseCannonC_SuperDuperTiberiumEnhanced"
+		Name="Reaper17TripodPulseCannonC_SuperDuperTiberiumEnhanced"
+		AttackRange="350.0"
+		WeaponSpeed="400.0"
+		FireFX="FX_AlienChargedFire"
+		FireSound="Multisound:ALI_ReaperTripod_ConversionBeamWeaponFireMS"
+		MinTargetPitch="-15d"
+		MaxTargetPitch="15d"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AntiMask="ANTI_GROUND ANTI_STRUCTURE"
+		CanFireWhileMoving="true"
+		>
+		<FiringDuration
+			MinSeconds="1.75s"
+			MaxSeconds="1.75s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="1s"
+				LaserId="6"
+				HitGroundFX="FX_AlienTibLaserGroundHit"/>
+			<DamageNugget
+				Damage="700.0"
+				Radius="0.0"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL"
+			 />
+			<SpendStolenTiberiumNugget
+				AmountToSpend="5"
 			/>
 		</Nuggets>
 	</WeaponTemplate>
@@ -63,7 +197,7 @@
 				DeathType="NORMAL"
 			 />
 			<SpendStolenTiberiumNugget
-				AmountToSpend="1"
+				AmountToSpend="10"
 			/>
 		</Nuggets>
 	</WeaponTemplate>
@@ -96,7 +230,7 @@
 				DeathType="NORMAL"
 			 />
 			<SpendStolenTiberiumNugget
-				AmountToSpend="1"
+				AmountToSpend="10"
 			/>
 		</Nuggets>
 	</WeaponTemplate>
@@ -129,7 +263,7 @@
 				DeathType="NORMAL"
 			 />
 			<SpendStolenTiberiumNugget
-				AmountToSpend="1"
+				AmountToSpend="10"
 			/>
 		</Nuggets>
 	</WeaponTemplate>
@@ -138,18 +272,19 @@
 			id="NeutralViceroidSpittleWeapon"
 			Name="NeutralViceroidSpittleWeapon"
 			AttackRange="50.0"
+			WeaponSpeed="300"
 			MinTargetPitch="-15d"
 			MaxTargetPitch="15d"
-			WeaponSpeed="300"
 			WeaponRecoil="0d"
 			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
 			ClipSize="1"
-			FireSound="AudioEvent:ALI_Viceroid_Attack"
 			ShotsPerBarrel="1"
+			FireSound="AudioEvent:ALI_Viceroid_Attack"
 			ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS">
 		<CoolDownDelayBetweenShots
 			MinSeconds="0.3s"
 			MaxSeconds="0.3s" />
+
 		<ClipReloadTime
 			MinSeconds="2.0s"
 			MaxSeconds="2.0s" />
@@ -192,15 +327,15 @@
 		<Nuggets>
 			<DamageNugget
 				Damage="75.0"
-				DamageArc="30d"
-				Radius="100"
+				Radius="50"
+				DamageArc="135d"
 				DamageTaperOff="0"
 				DelayTimeSeconds="0.0s"
 				DamageType="GRENADE"
 				DamageFXType="CLUBBING"
 				DeathType="NORMAL">
 				<DamageScalarDetails
-					 Scalar= "50%">
+					 Scalar="50%">
 					<Filter
 						Rule="ANY">
 						<IncludeThing>AlienAnnihilatorTripod</IncludeThing>
@@ -4811,7 +4946,7 @@
 		/>
 		<FiringDuration
 			MinSeconds="0.5s"
-			MaxSeconds="0.5s"
+			MaxSeconds="0.5s"	
 		/>
 		<Nuggets>
 			<AttributeModifierNugget

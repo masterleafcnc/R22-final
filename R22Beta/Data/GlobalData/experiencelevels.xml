@@ -6,7 +6,7 @@
 	<ExperienceLevelTemplate
 		id="ViceroidExperienceLevel_1"
 		RequiredExperience="1"
-		ExperienceAward="150"
+		ExperienceAward="100"
 		Rank="1">
 		<LevelUpTintColor
 			r="1.0"

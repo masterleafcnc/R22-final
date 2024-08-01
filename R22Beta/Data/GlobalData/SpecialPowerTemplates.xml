@@ -129,6 +129,38 @@
 -->
 
 <SpecialPowerTemplate
+		id="SpecialPowerDisruptionPod_Dispatch"
+		ReloadTime="30s"
+		TargetType="OBJECT_OR_LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceDisruptionPod"
+		WaypointModeTerminal="false"
+		Flags="FOGGED_SHROUDED_CELLS_OK"
+		Money="-300">
+		<GameDependency>
+			<NeededUpgrade>Upgrade_VertigoDisruptionPod</NeededUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPowerDisruptionPod_UnTargeted"
+		TargetType="LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceDisruptionPod"
+		ReloadTime="30s"
+		Money="-300">
+	</SpecialPowerTemplate>
+	<SpecialPowerTemplate
+		id="SpecialPowerDisruptionPod_Targeted"
+		TargetType="OBJECT"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceDisruptionPod"
+		Flags="NO_FORBIDDEN_OBJECTS"
+		ReloadTime="30s"
+		Money="-300">
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="INFANTRY HORDE AIRCRAFT" />
+	</SpecialPowerTemplate>
+
+
+<SpecialPowerTemplate
 		id="TiberiumAgitationGetInRange"
 		TargetType="OBJECT"
 		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceTiberiumAgitation"
@@ -202,24 +234,6 @@
 
 <SpecialPowerTemplate
 	id="SpecialPower_ConversionBeam"
-	TargetType="OBJECT"
-	MaxCastRange="100"
-	ReloadTime="3s"
-	Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
-	RequiredTargetObjectStatus="DOES_CONTAIN_TIBERIUM"
-	DisallowedTargetObjectStatus="IS_BEING_HARVESTED"
-	NameOfVoiceNameToUseAsInitiateIntendToDoVoice="InitiateConversionBeam"
-	WaypointModeTerminal="false">
-	<ObjectFilter
-		Rule="ANY"
-		Include="FS_MONEY_STORAGE TIBERIUM">
-		<IncludeThing>TiberiumCrystal</IncludeThing>
-		<IncludeThing>TiberiumCrystalBlue</IncludeThing>
-	</ObjectFilter>
-</SpecialPowerTemplate>
-	
-<SpecialPowerTemplate
-	id="SpecialPower_ConversionBeamUpgraded"
 	TargetType="OBJECT"
 	MaxCastRange="100"
 	ReloadTime="3s"
@@ -522,8 +536,8 @@
 			Rule="ANY"
 			Relationship="ENEMIES"
 			Alignment="NONE"
-			Include="VEHICLE"
-			Exclude="INFANTRY AIRCRAFT HORDE STRUCTURE TIBERIUM"
+			Include="STRUCTURE VEHICLE"
+			Exclude="INFANTRY AIRCRAFT HORDE TIBERIUM"
 			StatusBitFlags=""
 			RejectStatusBitFlags=""
 			AcceptModelCondition=""

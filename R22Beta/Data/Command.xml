@@ -20,6 +20,12 @@
 		id="Command_Uncombine3">
     <SpecialPower>SpecialPowerUncombineWithUnit3</SpecialPower>
   </LogicCommand>
+  
+   <LogicCommand
+		Type="SPECIAL_POWER"
+		id="Command_DevourerTankConversionBeam">
+    <SpecialPower>SpecialPower_ConversionBeam</SpecialPower>
+  </LogicCommand>
 
 -->
 	<LogicCommand
@@ -29,12 +35,13 @@
     <SpecialPower>SpecialPower_UseTiberiumAgitation</SpecialPower>
   </LogicCommand>
   
-  <LogicCommand
+ 
+  <!--
+   <LogicCommand
 		Type="SPECIAL_POWER"
 		id="Command_UpgradedConversionBeam">
     <SpecialPower>SpecialPower_ConversionBeamUpgraded</SpecialPower>
   </LogicCommand>
-  <!--
   <LogicCommand
 		Options="NEED_TARGET_POS"
 		Type="SPECIAL_POWER"

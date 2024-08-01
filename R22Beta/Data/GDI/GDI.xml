@@ -2,6 +2,9 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<Includes>
+		<Include source="Units/GDIOrca.xml" type="all"/>
+		<Include source="OrcaSensorStickyPods.xml" type="all"/>
+	<!--
 		<Include source="Structures/GDIAirTower.xml" type="all"/>
 	
 		<Include source="Units/GDIAPC.xml" type="all"/>
@@ -39,7 +42,6 @@
 		<Include source="IonCannonEffect.xml" type="all"/>
 		<Include source="Units/GDIHarvester.xml" type="all"/>
 		<Include source="Units/GDIMARV.xml" type="all"/>
-		<Include source="Units/GDIOrca.xml" type="all"/>
 		<Include source="Units/GDIRifleSoldierVeteran.xml" type="all"/>
 		<Include source="Units/GDIMissileSoldierVeteran.xml" type="all"/>
 		<Include source="Units/GDIMissileSoldierVeteranSquad.xml" type="all"/>
@@ -47,9 +49,8 @@
 		<Include source="Units/GDIRifleSoldier.xml" type="all"/>		
 		<Include source="Props/gdidroppod.xml" type="all"/>
 		<Include source="Structures/GDIGolumCannon.xml" type="all"/>	
-		<Include source="OrcaSensorStickyPods.xml" type="all"/>
 		<Include source="Structures/GDITiberiumSilo.xml" type="all"/> 
-
+-->
 	</Includes>
 
 </AssetDeclaration>

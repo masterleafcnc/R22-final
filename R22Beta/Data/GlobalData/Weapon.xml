@@ -1295,7 +1295,7 @@
 						Radius="5.0"
 						DamageFXType="ALIEN_TIOXIN"
 						DamageType="GRENADE"
-						SpawnProbability="0.039"
+						SpawnProbability="0.05"
 						SpawnedModelConditionFlags="EMOTION_DISSIDENT"
 						SpawnTemplate="Viceroid">
 						<SpecialObjectFilter
@@ -1502,7 +1502,7 @@
 			Radius="40.0"
 			DamageFXType="ALIEN_TIOXIN"
 			DamageType="GRENADE"
-			SpawnProbability="0.15"
+			SpawnProbability="0.05"
 			SpawnedModelConditionFlags="EMOTION_DISSIDENT"
 			SpawnTemplate="Viceroid">
 			<SpecialObjectFilter

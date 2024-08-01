@@ -9,6 +9,7 @@
 		<Include source="Units/alieneradicatorhexapod.xml" type="all"/> 
 		<Include source="Units/AlienWormHole.xml" type="all"/> 
 		<Include source="Units/AlienDevourerTank.xml" type="all"/> 
+		<!--<Include source="Props/NeutralViceroidSpittleWeaponProjectile.xml" type="all"/> -->
 		<!--
 	
 		<Include source="Structures/AlienGateway.xml" type="all"/>
