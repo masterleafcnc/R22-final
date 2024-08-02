@@ -19,6 +19,7 @@
 				<Include type="all" source="GlobalData/SpecialPowerTemplates.xml" />							
 				<Include type="all" source="NOD/NOD.xml" />
 				<Include type="all" source="GlobalData/WeaponR21.xml" />
+				<!--
 				<Include type="all" source="Reaper17/Reaper17.xml" />
 				<Include type="all" source="Command.xml" />
 				<Include type="all" source="GlobalData/Weapon.xml" />	
@@ -26,7 +27,6 @@
 				<Include type="all" source="GlobalData/experiencelevels.xml" />	
 				<Include type="all" source="GlobalData/Armor.xml" />
 				<Include type="all" source="Alien/Alien.xml" />	
-				<!--
 				<Include type="all" source="CGF/AlienGunwalker.xml" />
 				<Include type="all" source="CGF/T59Gunwalker.xml" />
 				<Include type="all" source="GlobalData/Locomotor.xml" /> 
@@ -44,7 +44,8 @@
 				<Include type="all" source="SteelTalons/SteelTalons.xml" />								
 				<Include type="all" source="CGF/GDIPitbull.xml" />	
 				<Include type="all" source="GlobalData/WeaponR20.xml" />	
-				<Include type="all" source="BlackHand/BlackHand.xml" /> -->
+				<Include type="all" source="BlackHand/BlackHand.xml" /> 
+				-->
 				<!--<Include type="all" source="TempProp.xml" />
 				<Include type="all" source="GlobalData/ObjectCreationLists.xml" />	 -->
 				

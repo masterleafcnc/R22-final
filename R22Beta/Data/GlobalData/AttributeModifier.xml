@@ -37,7 +37,7 @@
 	<AttributeModifier
         id="AttributeModifier_ReflectLimit0"
         Category="NONE"
-		Duration="1.0s"
+		Duration="1.5s"
         ModelConditionsSet="USER_69" />
 		
 	<AttributeModifier
@@ -49,7 +49,7 @@
 	<AttributeModifier
         id="AttributeModifier_ReflectLimit1"
         Category="NONE"
-		Duration="1.0s"
+		Duration="0.5s"
         ModelConditionsSet="USER_68" />
 
 	<AttributeModifier

@@ -2080,7 +2080,7 @@
 <WeaponTemplate
 	id="ReflectorWeapon2"
 	Name="ReflectorWeapon2"
-	RequiredFiringObjectStatus="RIDER1"
+	RequiredFiringObjectStatus="RIDER1 SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING"
 	AntiMask="ANTI_GROUND ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
 	RadiusDamageAffects="ENEMIES NEUTRALS">
 	<FiringDuration
@@ -2100,7 +2100,7 @@
 			Radius="10607.0"
 			PartitionFilterTestType="CIRCLE"
 			ForbiddenTargetModelCondition="USER_69"
-			RequiredObjectStatus="RIDER1"
+			RequiredObjectStatus="RIDER1 SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING"
 			AttributeModifierName="AttributeModifier_ReflectLimit1">
 			<SpecialObjectFilter
 				Rule="ALL"
