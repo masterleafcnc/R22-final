@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="us-ascii" ?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+<WeaponTemplate
+		id="NODAvatarBeamCannonLaser"
+		Name="NODAvatarBeamCannonLaser"
+		AttackRange="375.0"
+		WeaponSpeed="999999.0"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="15d"
+		CanFireWhileMoving="false"
+		ReAcquireDetailType="PRE_FIRE"
+		ClipSize="1"
+		FireFX="FX_NODAvatarBeamFire"
+		FireVeteranFX="FX_NODAvatarBeamFireHeroic"
+		FireSound="Multisound:NOD_AvatarWarMech_BeamCannonWeaponFireMS">
+		<PreAttackDelay
+			MinSeconds="0.5s"
+			MaxSeconds="0.5s" />
+		<FiringDuration
+			MinSeconds="0.75s"
+			MaxSeconds="0.75s" />
+		<ClipReloadTime
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<Nuggets>
+			<ActivateLaserNugget
+				Lifetime="0.5s"
+				LaserId="2"
+				HitGroundFX="FX_NODSpitfireHit" />
+			<DamageNugget
+				Damage="1100.0"
+				Radius="0.0"
+				DelayTimeSeconds="0.0s"
+				DamageType="CANNON"
+				DamageFXType="NOD_LASER"
+				DeathType="NORMAL" />
+		</Nuggets>
+	</WeaponTemplate>
 
 <WeaponTemplate
 		id="AlienDevourerBeamLaser_TiberiumEnhanced"

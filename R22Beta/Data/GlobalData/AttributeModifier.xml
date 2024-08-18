@@ -1,9 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- reckoner fix -->
+	
+	<AttributeModifier
+		id="AttributeModifier_BunkerTruckDeployed"
+		Category="NONE"
+		ObjectStatusToSet="CAN_ATTACK IMMOBILE"
+		ModelConditionsSet="UNPACKING">
+		<Modifier Type="SPEED" Value="0%"/>
+		<Modifier Type="ARMOR" Value="25%" />
+		<Modifier Type="RESIST_EMP" Value="100%"/>
+		<Modifier Type="CRUSHER_LEVEL" Value="-100%"/>
+	</AttributeModifier>	
+
 	<!-- rga aggressive stance fix -->
 	
-
 
 	<!-- MAMMOTH RGA FIX <Modifier Type="RATE_OF_FIRE" Value="100%"/> -->
 	
