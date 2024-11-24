@@ -74,73 +74,8 @@
 			</TruckDraw>
 		</Draws>
 		<Behaviors>
-			<Physics
-				id="ModuleTag_04" />
-			<ProductionUpdate
-				id="ModuleTag_08" />
-			<SlowDeath
-				id="ModuleTag_Death"
-				DeathObjectStatusBits="DONT_CLEAR_FOR_BUILD"
-				SinkDelay="3s"
-				SinkRate="2.0"
-				DestructionDelay="7s">
-				<OCL
-					Type="INITIAL">
-					<OCL>OCL_NODSurveyorDebris</OCL>
-				</OCL>
-				<DieMuxData
-					DeathTypes="ALL"
-					DeathTypesForbidden="TOPPLED" />
-				<Sound Type="INITIAL" List="NOD_Generic_VoiceDieMS" />
-			</SlowDeath>
-			<FXListBehavior
-				id="ModuleTag_FXList">
-				<DieMuxData
-					DeathTypes="ALL" />
-				<Event
-					Index="onDeath"
-					FX="FX_GDIVehicleExplodeNoScorch" />
-			</FXListBehavior>
-			<SpecialPower 
-				id="ModuleTag_GiveUnpackUpgradeSpecialPowerTrigger"
-				SpecialPowerTemplate="SpecialPower_GrantUnpackUpgrade"
-				UpdateModuleStartsAttack="true"
-			/>
-			<GiveOrRestoreUpgradeSpecialPower
-				id="ModuleTag_GiveUnpackUpgradeSpecialPowerUpdate"
-				SpecialPowerTemplate="SpecialPower_GrantUnpackUpgrade"
-				UpgradeToGive="Upgrade_UnPack"
-			/>
-			<ReplaceSelfUpgrade
-				id="ModuleTag_ReplaceSelf"
-				NewObjectUnpackTime="20.0s"
-				CheckBuildAssistant="true">
-				<TriggeredBy>Upgrade_UnPack</TriggeredBy>
-				<ReplacementTemplate>BlackHandMiniMCVOutpost</ReplacementTemplate>
-			</ReplaceSelfUpgrade>
-			<AISpecialPowerUpdate
-				id="ModuleTag_EmissaryDeployOutpost"
-				CommandButtonName="Command_UnPackEmissary"
-				SpecialPowerAIType="SPECIAL_POWER_BUILD_CONYARD" />
-			<!-- No stances because there's no weapon -->
-			<CreateAndEnterObjectSpecialPower
-				id="ModuleTag_CallForTransport"
-				SpecialPowerTemplate="SpecialPowerCallForTransportNOD"
-				OCL="OCL_NodCallForTransportVehicle"
-				CreateLocation="CREATE_ABOVE_LOCATION"
-				TriggerFX="FX_NODCallForTransportFlare"
-				ChildModuleHandlesFX="true"
-				IdleWhenStartingPower="true">
-				<FXOffset x="25" y="0" z="0"></FXOffset>
-			</CreateAndEnterObjectSpecialPower>
-			<AISpecialPowerUpdate
-			  id ="ModuleTag_NODCallForTransportVehicleAI"
-			  CommandButtonName="Command_NodCallForTransportVehicle"
-			  SpecialPowerAIType="SPECIAL_POWER_MOVEMENT"
-			  MinimumCutoff="5000"
-			  UpdateTime="5.0s"
-			   />
-		<AttributeModifierPoolUpdate 
+
+			<AttributeModifierPoolUpdate 
 				id="DefaultAttributeModifierPoolUpdate"/>
 			<SquishCollide
 				id ="DefaultSquishCollide"/>
@@ -213,6 +148,74 @@
       <TemporarilyDefectUpdate
         id="ModuleTag_TemporarilyDefect"
         DefectionFrameCount="300" />
+
+			<Physics
+				id="ModuleTag_04" />
+			<ProductionUpdate
+				id="ModuleTag_08" />
+			<SlowDeath
+				id="ModuleTag_Death"
+				DeathObjectStatusBits="DONT_CLEAR_FOR_BUILD"
+				SinkDelay="3s"
+				SinkRate="2.0"
+				DestructionDelay="7s">
+				<OCL
+					Type="INITIAL">
+					<OCL>OCL_NODSurveyorDebris</OCL>
+				</OCL>
+				<DieMuxData
+					DeathTypes="ALL"
+					DeathTypesForbidden="TOPPLED" />
+				<Sound Type="INITIAL" List="NOD_Generic_VoiceDieMS" />
+			</SlowDeath>
+			<FXListBehavior
+				id="ModuleTag_FXList">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_GDIVehicleExplodeNoScorch" />
+			</FXListBehavior>
+			<SpecialPower 
+				id="ModuleTag_GiveUnpackUpgradeSpecialPowerTrigger"
+				SpecialPowerTemplate="SpecialPower_GrantUnpackUpgrade"
+				UpdateModuleStartsAttack="true"
+			/>
+			<GiveOrRestoreUpgradeSpecialPower
+				id="ModuleTag_GiveUnpackUpgradeSpecialPowerUpdate"
+				SpecialPowerTemplate="SpecialPower_GrantUnpackUpgrade"
+				UpgradeToGive="Upgrade_UnPack"
+			/>
+			<ReplaceSelfUpgrade
+				id="ModuleTag_ReplaceSelf"
+				NewObjectUnpackTime="20.0s"
+				CheckBuildAssistant="true">
+				<TriggeredBy>Upgrade_UnPack</TriggeredBy>
+				<ReplacementTemplate>BlackHandMiniMCVOutpost</ReplacementTemplate>
+			</ReplaceSelfUpgrade>
+			<AISpecialPowerUpdate
+				id="ModuleTag_EmissaryDeployOutpost"
+				CommandButtonName="Command_UnPackEmissary"
+				SpecialPowerAIType="SPECIAL_POWER_BUILD_CONYARD" />
+			<!-- No stances because there's no weapon -->
+			<CreateAndEnterObjectSpecialPower
+				id="ModuleTag_CallForTransport"
+				SpecialPowerTemplate="SpecialPowerCallForTransportNOD"
+				OCL="OCL_NodCallForTransportVehicle"
+				CreateLocation="CREATE_ABOVE_LOCATION"
+				TriggerFX="FX_NODCallForTransportFlare"
+				ChildModuleHandlesFX="true"
+				IdleWhenStartingPower="true">
+				<FXOffset x="25" y="0" z="0"></FXOffset>
+			</CreateAndEnterObjectSpecialPower>
+			<AISpecialPowerUpdate
+			  id ="ModuleTag_NODCallForTransportVehicleAI"
+			  CommandButtonName="Command_NodCallForTransportVehicle"
+			  SpecialPowerAIType="SPECIAL_POWER_MOVEMENT"
+			  MinimumCutoff="5000"
+			  UpdateTime="5.0s"
+			   />
+		
 		</Behaviors>
 		<AI>
 			<AIUpdate

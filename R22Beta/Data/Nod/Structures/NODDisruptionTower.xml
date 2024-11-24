@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<AssetDeclaration xmlns="uri:ea.com:eala:asset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<GameObject
 		id="NODDisruptionTower"
 		inheritFrom="BaseStructure"
@@ -79,7 +80,7 @@
 					<Texture
 						Original="NBDistTwr"
 						New="NBDistTwrD" />
-					
+
 					<ParticleSysBone
 						BoneName="RootTransform"
 						FXParticleSystemTemplate="NODBunkerSmoke"
@@ -146,7 +147,7 @@
 			</ScriptedModelDraw>
 		</Draws>
 		<Behaviors>
-			<AttributeModifierPoolUpdate id="DefaultAttributeModifierPoolUpdate"/>
+			<AttributeModifierPoolUpdate id="DefaultAttributeModifierPoolUpdate" />
 			<FireWeaponWhenDead
 				id="ModuleTag_CatalystDeathWeapon"
 				InitiallyActive="true"
@@ -197,7 +198,9 @@
 				BroadcastRange="450"
 				UpdatePeriod="1.0s">
 				<InvisibilityNugget
-              ForbiddenStatus="TIBERIUM_VIBRATING IS_FIRING_WEAPON USING_ABILITY IS_AIMING_WEAPON SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING"/>
+					HintDetectableStates="IS_ATTACKING"
+					ForbiddenConditions="PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_A USING_WEAPON_B USING_WEAPON_C"
+					ForbiddenStatus="TIBERIUM_VIBRATING USING_ABILITY SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING" />
 				<BroadcastObjectFilter
 					Rule="ANY"
 					Relationship="ALLIES"
@@ -206,8 +209,28 @@
 					<ExcludeThing>MarkedOfKaneDisruptionTower</ExcludeThing>
 					<ExcludeThing>Viceroid</ExcludeThing>
 					<ExcludeThing>AlienCrystalShield</ExcludeThing>
+					<ExcludeThing>NODVenom</ExcludeThing>
 				</BroadcastObjectFilter>
 			</InvisibilityUpdate>
+
+
+			<InvisibilityUpdate
+				id="ModuleTag_InvisibilityVenoms"
+				Options="BROADCAST STARTS_ACTIVE"
+				BroadcastRange="450"
+				UpdatePeriod="1.0s">
+				<InvisibilityNugget
+					HintDetectableStates="IS_ATTACKING"
+					ForbiddenConditions="PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_B USING_WEAPON_C"
+					ForbiddenStatus="USING_ABILITY SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING" />
+				<BroadcastObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>NODVenom</IncludeThing>
+					<IncludeThing>MarkedOfKaneVenom</IncludeThing>
+				</BroadcastObjectFilter>
+			</InvisibilityUpdate>
+
 			<RepairUpdate
 				id="ModuleTag_RepairUpdate">
 				<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
@@ -215,7 +238,7 @@
 			</RepairUpdate>
 			<CreateObjectDie
 				id="ModuleTag_CreateOccupiedDie"
-				CreationList="OCL_GenericNODBuildingDestruction" >		
+				CreationList="OCL_GenericNODBuildingDestruction">
 				<DieMuxData
 					DeathTypes="ALL"
 					DeathTypesForbidden="DETONATED SUICIDED" />
@@ -223,20 +246,20 @@
 			</CreateObjectDie>
 			<CreateObjectDie
 				id="ModuleTag_CreateOccupiedSuicide"
-				CreationList="OCL_GenericNODBuildingSuicide" >
+				CreationList="OCL_GenericNODBuildingSuicide">
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
-			
-			<EngineerContain 
+
+			<EngineerContain
 				id="ModuleTag_EngineerContain"
 				NameOfVoiceToUseForFriendlyEnter="VoiceEngineerRepair"
-				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding" 
+				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding"
 				EvaEventForRepair="BuildingRepaired"
-				FXForRepair="FX_Building_Repaired" 
+				FXForRepair="FX_Building_Repaired"
 				FXForCapture="FX_Building_Captured"
 				FXForCaptureAndReplace="FX_Building_Captured"
 				ImmediatelyEnabled="true">
-				<CanEnterFilter 
+				<CanEnterFilter
 					Rule="NONE"
 					Relationship="ALLIES">
 					<IncludeThing>GDIEngineer</IncludeThing>
@@ -263,7 +286,8 @@
 		</Body>
 		<ClientBehaviors>
 			<ModelConditionAudioLoopClientBehavior id="ModuleTag_NOD_DisruptionTower_OnLoop">
-				<ModelConditionSound Sound="AudioEvent:NOD_DisruptionTower_OnLoop" ExcludedFlags="UNDERPOWERED" />
+				<ModelConditionSound Sound="AudioEvent:NOD_DisruptionTower_OnLoop"
+					ExcludedFlags="UNDERPOWERED" />
 			</ModelConditionAudioLoopClientBehavior>
 		</ClientBehaviors>
 		<Geometry
@@ -283,30 +307,32 @@
 		</AudioArrayVoice>
 		<AudioArraySound>
 			<AudioEntry Sound="AudioEvent:GDI_BuildingPlaced" AudioType="soundUnderConstruction" />
-			<AudioEntry Sound="Multisound:HumanFaction_MediumBuilding_LightDamageMS" AudioType="soundOnDamaged" />
-			<AudioEntry Sound="Multisound:HumanFaction_MediumBuilding_HeavyDamageMS" AudioType="soundOnReallyDamaged" />
-			<AudioEntry 
+			<AudioEntry Sound="Multisound:HumanFaction_MediumBuilding_LightDamageMS"
+				AudioType="soundOnDamaged" />
+			<AudioEntry Sound="Multisound:HumanFaction_MediumBuilding_HeavyDamageMS"
+				AudioType="soundOnReallyDamaged" />
+			<AudioEntry
 				Sound="Multisound:NOD_DisruptionTower_OnlineMS"
 				AudioType="soundReenabled" />
-			<AudioEntry 
+			<AudioEntry
 				Sound="Multisound:NOD_DisruptionTower_OfflineMS"
 				AudioType="soundDisabled" />
-			<AudioEntry 
+			<AudioEntry
 				Sound="Multisound:BuildingGenericPowerOffMS"
 				AudioType="soundDisabledOnCreation" />
-		</AudioArraySound> 
+		</AudioArraySound>
 		<EvaEvents
-			EvaEventProductionStarted="BuildingConstructionStarted" 
-			EvaEventProductionComplete="BuildingConstructionComplete" 
-			EvaEventDamagedOwner="StructureUnderAttack" 	
+			EvaEventProductionStarted="BuildingConstructionStarted"
+			EvaEventProductionComplete="BuildingConstructionComplete"
+			EvaEventDamagedOwner="StructureUnderAttack"
 			EvaEventSoldOwner="StructureSold"
 			EvaEventRepairingOwner="StructureRepairing"
 			EvaEnemyObjectSightedEvent="EnemyCampSighted"
 			EvaEventAvailableForProduction="NewConstructionOptions"
-			EvaEventPlacementFailed="StructurePlacementFailed" 
-			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue" 
+			EvaEventPlacementFailed="StructurePlacementFailed"
+			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue"
 			EvaEventBuildOnHold="BuildOnHold"
-			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventBuildCancelled="BuildCancelled"
 			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
 			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />
 		<ShadowInfo

@@ -363,9 +363,10 @@
 				id="ModuleTag_AlienAssimilatorCaptureBuildingAI"
 				CommandButtonName="Command_CaptureBuilding"
 				SpecialPowerAIType="SPECIAL_POWER_CAPTURE_BUILDING" />
-			<StealthDetectorUpdate
-				id="ModuleTag_StealthDetect"
-				DetectionRange="100" />
+				<StealthDetectorUpdate 
+				id="ModuleTag_StealthDetect" 
+			  DetectionRange="100" 
+			  ExtraForbiddenKindOf="AIRCRAFT"/>
 			<FindCoverBehavior
 				id="ModuleTag_FCB"
 				CoverScanRange="10.0"

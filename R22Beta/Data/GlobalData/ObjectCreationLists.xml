@@ -1,34 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
-<!--
-<ObjectCreationList
-		id="ForceFireFixOCL">
+
+	<!-- emp fix attempt
+	<ObjectCreationList
+		id="OCL_EMPWeaponObjectSW">
 		<CreateObject
-			Options="IGNORE_ALL_OBJECTS"
-			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
-			<CreateObject>TempProp</CreateObject>
+			Disposition="ON_GROUND_ALIGNED"
+			Options="IGNORE_ALL_OBJECTS">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>EMPWeaponObjectSW</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
--->
-<ObjectCreationList
+	</ObjectCreationList>
+
+	<ObjectCreationList
+		id="OCL_EMPWeaponObject">
+		<CreateObject
+			Disposition="ON_GROUND_ALIGNED"
+			Options="IGNORE_ALL_OBJECTS">
+			<Offset x="0" y="0" z="0" />
+			<CreateObject>EMPWeaponObject</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+ -->
+	<ObjectCreationList
 		id="OCL_MiniTiberiumRockTiberiumCrystal">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
 			DestinationPlayer=""
 			Disposition="ON_GROUND_ALIGNED"
 			DispositionIntensity="0.0">
-			<Offset x="0" y="0" z="0"/>
+			<Offset x="0" y="0" z="0" />
 			<CreateObject>OverlordsWrathTiberiumCrystal</CreateObject>
-		</CreateObject>			
-	</ObjectCreationList>	
+		</CreateObject>
+	</ObjectCreationList>
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCL_NODVeinDetonationTrigger">
 		<CreateObject
 			Disposition="ON_GROUND_ALIGNED"
 			Options="IGNORE_ALL_OBJECTS"
 			CreateFX="FX_NOD_TiberiumVeinDetonation">
-			<Offset x="0" y="0" z="0"/>
+			<Offset x="0" y="0" z="0" />
 			<CreateObject>NODVeinDetonationTrigger</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
@@ -37,12 +49,12 @@
 		<CreateObject
 			Disposition="ON_GROUND_ALIGNED"
 			Options="IGNORE_ALL_OBJECTS">
-			<Offset x="0" y="0" z="0"/>
+			<Offset x="0" y="0" z="0" />
 			<CreateObject>NODVeinDetonation</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
+	</ObjectCreationList>
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCL_ConyardNODBuildingSuicide">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
@@ -59,51 +71,51 @@
 			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
 			<CreateObject>MCVKiller</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
+	</ObjectCreationList>
 
-<ObjectCreationList
-	id="OCL_ConyardMarkedOfKaneBuildingSuicide">
-	<CreateObject
-		Options="IGNORE_ALL_OBJECTS"
-		Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
-		MinHealth="1.0"
-		MaxHealth="1.0"
-		MinHordeDensity="34"
-		MaxHordeDensity="35">
-		<CreateObject>MOKCyborgInfantrySquad</CreateObject>
-	</CreateObject>
-	<CreateObject
-		Options="IGNORE_ALL_OBJECTS"
-		Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
-		<CreateObject>MarkedOfKaneSaboteur</CreateObject>
-	</CreateObject>
-	<CreateObject
-		Options="IGNORE_ALL_OBJECTS"
-		Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
-		<CreateObject>MCVKiller</CreateObject>
-	</CreateObject>
-</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_ConyardMarkedOfKaneBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND"
+			MinHealth="1.0"
+			MaxHealth="1.0"
+			MinHordeDensity="34"
+			MaxHordeDensity="35">
+			<CreateObject>MOKCyborgInfantrySquad</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>MarkedOfKaneSaboteur</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>MCVKiller</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
 
-<ObjectCreationList
-	id="OCL_ConyardBlackHandBuildingSuicide">
-	<CreateObject
-		Options="IGNORE_ALL_OBJECTS"
-		Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
-		<CreateObject>BlackHandConfessorSquad</CreateObject>
-	</CreateObject>
-	<CreateObject
-		Options="IGNORE_ALL_OBJECTS"
-		Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
-		<CreateObject>BlackHandSaboteur</CreateObject>
-	</CreateObject>
-	<CreateObject
-		Options="IGNORE_ALL_OBJECTS"
-		Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
-		<CreateObject>MCVKiller</CreateObject>
-	</CreateObject>
-</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_ConyardBlackHandBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>BlackHandConfessorSquad</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>BlackHandSaboteur</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>MCVKiller</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCL_ConyardAlienBuildingSuicide">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
@@ -120,9 +132,9 @@
 			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
 			<CreateObject>MCVKiller</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
+	</ObjectCreationList>
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCL_ConyardTraveler59BuildingSuicide">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
@@ -139,9 +151,9 @@
 			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
 			<CreateObject>MCVKiller</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
+	</ObjectCreationList>
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCL_ConyardReaper17BuildingSuicide">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
@@ -158,9 +170,9 @@
 			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
 			<CreateObject>MCVKiller</CreateObject>
 		</CreateObject>
-</ObjectCreationList>	
+	</ObjectCreationList>
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCL_ConyardGDIBuildingSuicide">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
@@ -177,9 +189,9 @@
 			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
 			<CreateObject>MCVKiller</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
+	</ObjectCreationList>
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCL_ConyardZOCOMBuildingSuicide">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
@@ -196,9 +208,9 @@
 			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
 			<CreateObject>MCVKiller</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
+	</ObjectCreationList>
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCL_ConyardSteelTalonsBuildingSuicide">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
@@ -215,11 +227,11 @@
 			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
 			<CreateObject>MCVKiller</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
+	</ObjectCreationList>
 
-<!-- rigs -->
+	<!-- rigs -->
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCL_BattleBaseGDIBuildingSuicide">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
@@ -231,40 +243,40 @@
 			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
 			<CreateObject>MCVKiller</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
+	</ObjectCreationList>
 
 
-<ObjectCreationList
-	id="OCL_BattleBaseSteelTalonsBuildingSuicide">
-	<CreateObject
-		Options="IGNORE_ALL_OBJECTS"
-		Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
-		<CreateObject>SteelTalonsRifleSoldierSquad</CreateObject>
-	</CreateObject>
-	<CreateObject
-		Options="IGNORE_ALL_OBJECTS"
-		Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
-		<CreateObject>MCVKiller</CreateObject>
-	</CreateObject>
-</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_BattleBaseSteelTalonsBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>SteelTalonsRifleSoldierSquad</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>MCVKiller</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
 
-<ObjectCreationList
-	id="OCL_BattleBaseZOCOMBuildingSuicide">
-	<CreateObject
-		Options="IGNORE_ALL_OBJECTS"
-		Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
-		<CreateObject>ZOCOMRifleSoldierSquad</CreateObject>
-	</CreateObject>
-	<CreateObject
-		Options="IGNORE_ALL_OBJECTS"
-		Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
-		<CreateObject>MCVKiller</CreateObject>
-	</CreateObject>
-</ObjectCreationList>
+	<ObjectCreationList
+		id="OCL_BattleBaseZOCOMBuildingSuicide">
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>ZOCOMRifleSoldierSquad</CreateObject>
+		</CreateObject>
+		<CreateObject
+			Options="IGNORE_ALL_OBJECTS"
+			Disposition="ON_GROUND_ALIGNED CLAMP_TO_GROUND">
+			<CreateObject>MCVKiller</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
 
-<!-- eo rigs -->
+	<!-- eo rigs -->
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCLEMPControlCenter">
 		<CreateObject
 			Disposition="RELATIVE_ANGLE USE_WATER_SURFACE"
@@ -300,7 +312,7 @@
 		</CreateObject>
 	</ObjectCreationList>
 
-<ObjectCreationList
+	<ObjectCreationList
 		id="HarvesterDeathGreenTiberiumOCL">
 		<CreateObject
 			Disposition="RELATIVE_ANGLE USE_WATER_SURFACE"
@@ -308,8 +320,8 @@
 			Options="IGNORE_ALL_OBJECTS SCALE_TIBERIUM_FIELD">
 			<CreateObject>GreenTiberiumFieldFromHarvesterDeath</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
-<ObjectCreationList
+	</ObjectCreationList>
+	<ObjectCreationList
 		id="HarvesterDeathBlueTiberiumOCL">
 		<CreateObject
 			Disposition="RELATIVE_ANGLE USE_WATER_SURFACE"
@@ -317,8 +329,8 @@
 			Options="IGNORE_ALL_OBJECTS SCALE_TIBERIUM_FIELD">
 			<CreateObject>BlueTiberiumFieldFromHarvesterDeath</CreateObject>
 		</CreateObject>
-</ObjectCreationList>
-<!--
+	</ObjectCreationList>
+	<!--
 <ObjectCreationList
 		id="HarvesterDeathGreenTiberiumDummyOCL">
 		<CreateObject
@@ -338,20 +350,20 @@
 		</CreateObject>
 </ObjectCreationList>
 -->
-<ObjectCreationList
+	<ObjectCreationList
 		id="MoKAvatarDieOCL">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS COPY_CREATORS_UPGRADES PRESERVE_LAYER"
 			Disposition="LIKE_EXISTING"
 			TempModelCondition="USER_2"
 			TempModelConditionTime="4.0s"
-			InvulnerableTime="4s" 
+			InvulnerableTime="4s"
 			MinHealth="0.5"
 			MaxHealth="0.5">
 			<CreateObject>MarkedOfKaneAvatarHusk</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
-<ObjectCreationList
+	<ObjectCreationList
 		id="OCL_GDIHammerheadInitialDebris">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
@@ -454,9 +466,9 @@
 				y="0.0"
 				z="0.0"></Offset>
 			<CreateObject>GDIHammerheadDebris_06</CreateObject>
-	</CreateObject>
+		</CreateObject>
 	</ObjectCreationList>
-	
+
 	<ObjectCreationList
 		id="OCL_GenericGDIBuildingDestruction1">
 		<CreateObject
@@ -479,7 +491,7 @@
 			<CreateObject>GDIRifleSoldierSquad</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
-	
+
 	<ObjectCreationList
 		id="OCL_GenericSteelTalonsBuildingDestruction1">
 		<CreateObject
@@ -502,7 +514,7 @@
 			<CreateObject>SteelTalonsRifleSoldierSquad</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
-	
+
 	<ObjectCreationList
 		id="OCL_GenericZOCOMBuildingDestruction1">
 		<CreateObject
@@ -525,5 +537,5 @@
 			<CreateObject>ZOCOMRifleSoldierSquad</CreateObject>
 		</CreateObject>
 	</ObjectCreationList>
-	
+
 </AssetDeclaration>

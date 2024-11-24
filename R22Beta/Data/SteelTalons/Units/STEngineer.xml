@@ -753,30 +753,11 @@
 				HideSubObjectsOnRemove="True"
 				UnHideSubObjectsOnRemove="True">
 				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
-				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
 			</SubObjectsUpgrade>
-			<StealthDetectorUpdate
-				id="D6D223EC"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				DetectionRate="0.4s"
-				DetectionRange="100"
-				PingSound=""
-				LoudPingSound=""
-				IRBeaconParticleSys=""
-				IRParticleSys=""
-				IRBrightParticleSys=""
-				IRGridParticleSys=""
-				ExtraRequiredKindOf=""
-				ExtraForbiddenKindOf=""
-				RequiredUpgrade=""
-				InitiallyDisabled="False"
-				CanDetectWhileGarrisoned="False"
-				CanDetectWhileContained="False"
-				UseMetaAOI="False" />
+			<StealthDetectorUpdate 
+			id="ModuleTag_StealthDetect" 
+		  DetectionRange="100" 
+		  ExtraForbiddenKindOf="AIRCRAFT"/>
 			<EmotionTrackerUpdate
 				id="AA62C7E4"
 				TauntAndPointDistance="0"

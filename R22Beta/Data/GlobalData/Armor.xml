@@ -182,9 +182,6 @@
 			Damage="SNIPER"
 			Percent="400%" />
 		<Armor
-			Damage="TIBERIUM"
-			Percent="0%" />
-		<Armor
 			Damage="MINE"
 			Percent="400%" />	
 	</ArmorTemplate>
@@ -211,9 +208,6 @@
 		<Armor
 			Damage="SNIPER"
 			Percent="300%" />
-		<Armor
-			Damage="TIBERIUM"
-			Percent="0%" />
 		<Armor
 			Damage="MINE"
 			Percent="400%" />	

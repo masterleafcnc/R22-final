@@ -4,7 +4,7 @@
 		id="TempProp"
 		Side="Neutral"
 		EditorSorting="MISC_MAN_MADE"
-		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS SCORE TRANSPORT VEHICLE CAN_REVERSE_MOVE CAN_BE_FAVORITE_UNIT"
+		KindOf="PRELOAD SELECTABLE IGNORE_FOR_VICTORY STRUCTURE IGNORED_IN_FINDPOSITIONAROUND"
 		EditorName="TempProp">
 		<DisplayName>PropName</DisplayName>
 		<ArmorSet
@@ -16,22 +16,36 @@
 				<ModelConditionState
 					ParseCondStateType="PARSE_DEFAULT">
 					<Model
-						Name="W3DContainer:GBTeraSta_SKN" />
+						Name="" />
 				</ModelConditionState>
 			</ScriptedModelDraw>
 		</Draws>
 		<Behaviors>
+			<!--
+			<AttachUpdate
+				id="ModuleTag_Attach"
+				Range="25.0"
+				Teleport="true"
+				UseGeometry="true"
+				DetachWhenParentHealed="true">
+				<ObjectFilter
+					Rule="ALL">
+					<ExcludeThing>AlienCrystalShield</ExcludeThing>
+				</ObjectFilter>
+			</AttachUpdate>
+	
+			
 			<FireWeaponUpdate
 				id="ModuleTag_FireWeaponUpdate">
 				<FireWeaponNugget
 					WeaponName="AlienWormholeWeaponTrigger"
 				/>
 			</FireWeaponUpdate>
-		
+		-->
 			<LifetimeUpdate
 				id="ModuleTag_Lifetime"
-				MinLifetime="20s"
-				MaxLifetime="20s" />
+				MinLifetime="1.0s"
+				MaxLifetime="1.0s" />
 			<DestroyDie
 				id="ModuleTag_DestroyDie">
 				<DieMuxData
@@ -45,11 +59,59 @@
 				InitialHealth="100.0" />
 		</Body>
 		<Geometry
-			IsSmall="false">
+			IsSmall="True">
+			<!--
 			<Shape
-				Type="CYLINDER"
-				MajorRadius="30.0"
-				Height="100.0"/>
+				Type="BOX"
+				MajorRadius="1"
+				MinorRadius="9"
+				Height="11.5"
+				FrontAngle="0d"
+				Active="True"
+				ContactPointGeneration="VEHICLE"
+				UsedForHealthBox="True">
+				<Offset
+					x="20.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+
+			<Shape
+				Type="BOX"
+				MajorRadius="8"
+				MinorRadius="1"
+				Height="11.5"
+				FrontAngle="0d"
+				Active="True"
+				ContactPointGeneration="VEHICLE"
+				UsedForHealthBox="True">
+				<Offset
+					x="8.0" 
+					y="9"
+					z="0.0" />
+			</Shape>
+			
+			<Shape
+				Type="BOX"
+				MajorRadius="8"
+				MinorRadius="1"
+				Height="11.5"
+				FrontAngle="0d"
+				Active="True"
+				ContactPointGeneration="VEHICLE"
+				UsedForHealthBox="True">
+				<Offset
+					x="8.0"
+					y="-9"
+					z="0.0" />
+			</Shape>
+			-->
+			<Shape
+				Type="BOX"
+				MajorRadius="5.0"
+				MinorRadius="9.0"
+				Height="11.5"
+				ContactPointGeneration="VEHICLE" />
 		</Geometry>
 	</GameObject>
 </AssetDeclaration>

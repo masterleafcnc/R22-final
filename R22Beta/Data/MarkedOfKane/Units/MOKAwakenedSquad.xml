@@ -501,29 +501,10 @@
 					AcceptModelCondition=""
 					RejectModelCondition="" />
 			</HordeDispatchSpecialPower>
-			<StealthDetectorUpdate
-				id="DD66CD5B"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				DetectionRate="0.4s"
-				DetectionRange="100"
-				PingSound=""
-				LoudPingSound=""
-				IRBeaconParticleSys=""
-				IRParticleSys=""
-				IRBrightParticleSys=""
-				IRGridParticleSys=""
-				IRParticleSysBone=""
-				ExtraRequiredKindOf=""
-				ExtraForbiddenKindOf=""
-				RequiredUpgrade=""
-				InitiallyDisabled="False"
-				CanDetectWhileGarrisoned="False"
-				CanDetectWhileContained="False"
-				UseMetaAOI="False" />
+			<StealthDetectorUpdate 
+			id="ModuleTag_StealthDetect" 
+		  DetectionRange="100" 
+		  ExtraForbiddenKindOf="AIRCRAFT"/>
 			<Physics
 				id="434581EF"
 				MaxXRotationVelocity="360"

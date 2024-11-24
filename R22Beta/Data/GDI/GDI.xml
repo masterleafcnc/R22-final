@@ -2,16 +2,21 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<Includes>
+		<Include source="Units/GDIZoneInf.xml" type="all"/>	
+
+		<Include source="Units/GDIGrenadeSoldier.xml" type="all"/>
+		<Include source="Units/GDIGrenadeSoldierEMPGrenadeProjectile.xml" type="all"/>
+
+
 		<Include source="Units/GDIOrca.xml" type="all"/>
 		<Include source="OrcaSensorStickyPods.xml" type="all"/>
-	<!--
+	
 		<Include source="Structures/GDIAirTower.xml" type="all"/>
 	
 		<Include source="Units/GDIAPC.xml" type="all"/>
 		<Include source="Units/GDIHammerhead.xml" type="all"/>
 		<Include source="Units/GDIAPCVeteran.xml" type="all"/>	
 		<Include source="Units/GDIGrenadeSoldierSquad.xml" type="all"/>
-		<Include source="Units/GDIGrenadeSoldier.xml" type="all"/>
 		<Include source="Units/GDIJuggernaughtHusk.xml" type="all"/>	
 		<Include source="Units/GDIEngineer.xml" type="all"/>	
 		<Include source="Structures/GDIPowerPlant.xml" type="all"/>
@@ -33,7 +38,6 @@
 		<Include source="Units/GDIHarvester.xml" type="all"/>	
 		<Include source="Units/GDIJuggernaught.xml" type="all"/>	
 		<Include source="Units/GDISurveyor.xml" type="all"/>	
-		<Include source="Units/GDIZoneInf.xml" type="all"/>	
 		<Include source="Units/GDIV35Ox.xml" type="all"/>			
 		<Include source="Units/GDIRig.xml" type="all"/>			
 		<Include source="Units/GDIMCV.xml" type="all"/>
@@ -50,7 +54,13 @@
 		<Include source="Props/gdidroppod.xml" type="all"/>
 		<Include source="Structures/GDIGolumCannon.xml" type="all"/>	
 		<Include source="Structures/GDITiberiumSilo.xml" type="all"/> 
--->
+
 	</Includes>
+
+
+	<!-- old emp fix 
+	 
+			<Include source="Props/EMPWeaponObject.xml" type="all"/>
+		<Include source="Props/EMPWeaponObjectSW.xml" type="all"/>-->
 
 </AssetDeclaration>

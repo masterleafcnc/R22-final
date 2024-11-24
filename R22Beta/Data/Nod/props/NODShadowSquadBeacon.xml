@@ -426,6 +426,7 @@
 				SetBonusModelConditionOnSpeedBonus="False"
 				SecondaryQueue="False"
 				IgnorePreReqs="False" />
+				<!--
 			<InvisibilityUpdate
 				id="03CF4422"
 				Options="STARTS_ACTIVE"
@@ -438,6 +439,28 @@
 					ForbiddenConditionExceptions=""
 					ForbiddenWeaponSets=""
 					ForbiddenStatus=""
+					CamouflageLevel="0"
+					InvisibilityType="STEALTH"
+					Options=""
+					EnteringStealthFX="FX_NODStealthTransitionOn"
+					LeavingStealthFX="FX_NODStealthTransitionOff"
+					HintDetectableStates="IS_ATTACKING"
+					NoStealthForAttackWindow="0s" />
+			</InvisibilityUpdate>
+			-->
+
+			<InvisibilityUpdate
+				id="03CF4422"
+				Options="STARTS_ACTIVE"
+				UpdatePeriod="0.2s"
+				BroadcastRange="0"
+				OpacityMin="30%"
+				OpacityMax="100%">
+				<InvisibilityNugget
+					ForbiddenConditions="PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_A USING_WEAPON_B USING_WEAPON_C"
+					ForbiddenConditionExceptions=""
+					ForbiddenWeaponSets=""
+					ForbiddenStatus="IS_FIRING_WEAPON USING_ABILITY IS_AIMING_WEAPON SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING"
 					CamouflageLevel="0"
 					InvisibilityType="STEALTH"
 					Options=""

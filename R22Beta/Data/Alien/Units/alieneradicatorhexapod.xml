@@ -5510,7 +5510,7 @@
 			<SalvagerInfo
 				id="F9BFFA36"
 				SalvageRadius="450"
-				PercentageOfBountyRecycled="15%"
+				PercentageOfBountyRecycled="10%"
 				UseBountyNotUnitCost="False" />
 			<AttributeModifierAuraUpdate
 				id="2F4453FB"

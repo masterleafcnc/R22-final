@@ -35,7 +35,14 @@
 				id="ModuleTag_Lifetime"
 				DeathType="NORMAL"
 				MinLifetime="300s"
-				MaxLifetime="300s" />		
+				MaxLifetime="300s" />	
+
+			<DestroyDie
+				id="ModuleTag_DestroyDie">
+				<DieMuxData
+					DeathTypes="ALL"
+				/>
+			</DestroyDie>				
 			<TiberiumField
 				id="tib_field"
 				Radius="320"

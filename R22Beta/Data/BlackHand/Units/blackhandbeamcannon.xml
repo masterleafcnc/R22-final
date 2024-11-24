@@ -469,6 +469,7 @@
 			</LaserDraw>
 		</Draws>
 		<Behaviors>
+			<!--
 			<PassiveAreaEffectBehavior
 				id="D29AAF86"
 				EffectRadius="625"
@@ -495,7 +496,8 @@
 					RejectStatusBitFlags=""
 					AcceptModelCondition=""
 					RejectModelCondition="" />
-			</PassiveAreaEffectBehavior>
+			</PassiveAreaEffectBehavior>\
+			-->
 			<AttributeModifierPoolUpdate
 				id="788FFB50" />
 			<SquishCollide
@@ -892,7 +894,7 @@
 				StartRechargeOnExit="False"
 				GoIdleInStartPreparation="True"
 				FaceTarget="True"
-				DamagePerSecond="125"
+				DamagePerSecond="135"
 				TargetAttributeModifierAdd=""
 				SweepFX=""
 				ReflectorExtendDistance="0"

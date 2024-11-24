@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
+	<!-- no longer needed
+
+	<SpecialPowerTemplate
+		id="SpecialPower_FireEMPGrenades"
+		ReloadTime="30s"
+		RadiusCursorRadius="60"
+		TargetType="LOCATION"
+		RestrictionType="1"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="VoiceAttackEMPGrenades" >
+		<GameDependency>
+			<NeededUpgrade>Upgrade_EMPGrenades</NeededUpgrade>
+		</GameDependency>
+	</SpecialPowerTemplate>
+
+	<SpecialPowerTemplate
+		id="SpecialPower_TeleportObjectsDispatch"
+		TargetType="OBJECT_OR_LOCATION"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice=""
+		ReloadTime="0s" />
+
+	<SpecialPowerTemplate
+		id="SpecialPower_TempRemoveEMP"
+		TargetType="OBJECT_OR_LOCATION" />
+-->
+
+
+<!--
+	<SpecialPowerTemplate
+	id="SpecialPower_RiftGeneratorWeapon"
+	DisplayName="NAME:SuperweaponTimerRiftGenerator"
+	Description="DESC:SuperweaponTimerRiftGenerator"
+	Flags="HAS_PUBLIC_TIMER IS_PLAYER_POWER FOGGED_SHROUDED_CELLS_OK WATER_OK IGNORE_MAP_EXTENTS SHARED_SYNC"
+	ReloadTime="0s"
+	TargetType="LOCATION"
+	EvaEventToPlayWhenSelectingTarget="SelectSpecialPowerTarget"
+	EvaEventToPlayOnInitiateOwner="OwnRiftGeneratorActivated"
+	EvaEventToPlayOnInitiateAlly="AlliedRiftGeneratorActivated"
+	EvaEventToPlayOnInitiateEnemy="EnemyRiftGeneratorActivated"
+	RadiusCursorRadius="250"
+	RestrictionType="1"
+	TimerImage="Button_PlayerPowerRiftGenerator" />
+-->
+
 <!-- rage cooldown test -->
 <!--
 <SpecialPowerTemplate
@@ -1181,6 +1224,23 @@
 		</GameDependency>
 	</SpecialPowerTemplate>
 	
+	<!-- Traveler-59 blink cooldown normalized to the other Scrin factions -->
+	
+	<SpecialPowerTemplate
+		id="SpecialPower_UseTraveler59BlinkPack"
+		TargetType="LOCATION"
+		InitiateSound="AudioEvent:ALI_ShockTrooper_Blink"
+		WaypointModeTerminal="false"
+		RadiusCursorRadius="16"
+		ForbiddenObjectRange="16"
+		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="BlinkPack"
+		Flags="PATHABLE_ONLY NOT_CLIFF_CELL NO_FORBIDDEN_OBJECTS"
+		ReloadTime="15s">
+		<ForbiddenObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE CRUSHABLE_OBSTACLE VEHICLE" />
+	</SpecialPowerTemplate>
+	
 	<!-- supersonic airstrike cost increased to 2500$ -->
 	
 	<SpecialPowerTemplate
@@ -1667,7 +1727,7 @@
 		NameOfVoiceNameToUseAsInitiateIntendToDoVoice="TeleportObject"
 		WaypointModeTerminal="false"
 		DisallowedTargetModelStates="LOCOMOTOR_NORMAL_UPGRADED EMOTION_DISSIDENT"		
-		DisallowedTargetObjectStatus="INSIDE_GARRISON AIRBORNE_TARGET OUT_OF_PHASE POWERED_DOWN_EMP IN_STASIS">
+		DisallowedTargetObjectStatus="INSIDE_GARRISON AIRBORNE_TARGET OUT_OF_PHASE POWERED_DOWN_EMP IN_STASIS CARRYING_FLAG">
 		<ObjectFilter
 			Relationship="ALLIES"
 			Rule="ANY"

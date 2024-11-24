@@ -544,7 +544,7 @@
 				IRBrightParticleSys=""
 				IRGridParticleSys=""
 				ExtraRequiredKindOf=""
-				ExtraForbiddenKindOf=""
+				ExtraForbiddenKindOf="INFILTRATOR"
 				RequiredUpgrade=""
 				InitiallyDisabled="False"
 				CanDetectWhileGarrisoned="False"

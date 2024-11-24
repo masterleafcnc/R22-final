@@ -228,7 +228,8 @@
 						FadingIn="False" />
 					<Script>
 						Prev = CurDrawablePrevAnimationState();
-						if Prev == "STATE_Selected" or Prev == "ATNB" or Prev == "STATE_Run" then CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle") end;
+						if Prev == "STATE_Selected" or Prev == "ATNB" or Prev == "STATE_Run" then
+						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle") end;
 					</Script>
 				</AnimationState>
 				<AnimationState
@@ -453,7 +454,8 @@
 						FadingIn="False" />
 					<Script>
 						Prev = CurDrawablePrevAnimationState();
-							if Prev == "STATE_bored" then CurDrawableSetTransitionAnimState("TRANS_boredToAttention") end;
+						if Prev == "STATE_bored" then
+						CurDrawableSetTransitionAnimState("TRANS_boredToAttention") end;
 					</Script>
 				</AnimationState>
 				<AnimationState
@@ -729,28 +731,10 @@
 						IsPlayerUpgradePermanent="False" />
 				</WeaponSlotHardpoint>
 			</WeaponSetUpdate>
-			<StealthDetectorUpdate
-				id="D6D223EC"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				DetectionRate="0.4s"
-				DetectionRange="100"
-				PingSound=""
-				LoudPingSound=""
-				IRBeaconParticleSys=""
-				IRParticleSys=""
-				IRBrightParticleSys=""
-				IRGridParticleSys=""
-				ExtraRequiredKindOf=""
-				ExtraForbiddenKindOf=""
-				RequiredUpgrade=""
-				InitiallyDisabled="False"
-				CanDetectWhileGarrisoned="False"
-				CanDetectWhileContained="False"
-				UseMetaAOI="False" />
+			<StealthDetectorUpdate 
+			id="ModuleTag_StealthDetect" 
+		  DetectionRange="100" 
+		  ExtraForbiddenKindOf="AIRCRAFT"/>
 			<SpecialPowerDispatchSpecialPower
 				id="46FA235D"
 				SpecialPowerTemplate="SpecialPower_ManipulateObject"
@@ -1116,13 +1100,26 @@
 					AcceptModelCondition=""
 					RejectModelCondition="" />
 			</TemporaryOwnerSpecialPower>
-			 <!--
+			<!--
 			 				PackTime="0s"
 				UnpackTime="0s"
 			 				-->
+			<!--
+			<SpecialPowerDispatchSpecialPower
+				id="ModuleTag_TeleportObjectsDispatch"
+				SpecialPowerTemplate="SpecialPowerMastermindTeleportObjectSelect">
+				<SpecialPower
+					SpecialPowerTemplate="SpecialPowerMastermindTeleportObjectSelect" />
+				<SpecialPower
+					SpecialPowerTemplate="SpecialPowerMastermindTeleportObject" />
+				<SpecialPower
+					SpecialPowerTemplate="SpecialPower_TempRemoveEMP" />
+			</SpecialPowerDispatchSpecialPower>
+		-->
+
 			<SpecialPower
 				id="ModuleTag_StoreObjectsSpecialPower"
-				SpecialPowerTemplate="SpecialPowerMastermindTeleportObjectSelect"/>
+				SpecialPowerTemplate="SpecialPowerMastermindTeleportObjectSelect" />
 			<StoreObjectsSpecialPowerUpdate
 				id="ModuleTag_StoreObjectsSpecialPowerUpdate"
 				SpecialPowerTemplate="SpecialPowerMastermindTeleportObjectSelect"
@@ -1132,6 +1129,9 @@
 				UnpackTime="0s"
 				FaceTarget="False"
 				Radius="50" />
+
+		
+
 			<SpecialPower
 				id="ModuleTag_TeleportStoredObjectsSpecialPower"
 				SpecialPowerTemplate="SpecialPowerMastermindTeleportObject"
@@ -1140,11 +1140,34 @@
 				id="ModuleTag_TeleportStoredObjectsSpecialPowerUpdate"
 				SpecialPowerTemplate="SpecialPowerMastermindTeleportObject"
 				RequireStoredObjects="false"
-				TriggerFX="FX_AlienMMTP"			
+				TriggerFX="FX_AlienMMTP"
 				KillObjectsIfPlacedInBadSpot="false"
 				FaceTarget="False"
+				ChainedButton=""
 				MinDestinationRadius="0"
 				MaxDestinationRadius="50" />
+					<!--
+			<SpecialPower
+				id="ModuleTag_TempEMP"
+				SpecialPowerTemplate="SpecialPower_TempRemoveEMP"
+				UpdateModuleStartsAttack="true" />
+			<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_WeaponFireSpecialAbilityUpdateTeleportStoredObjects"
+				SpecialPowerTemplate="SpecialPower_TempRemoveEMP"
+				SpecialWeapon="UnEmpUnitsBriefly"
+				WhichSpecialWeapon="1"
+			/>
+		
+
+try chaining commands here to fire a weapon in a radius of 1 that unemps units for the minimum
+			possible time for 0.1s (uses logic command).
+				<WeaponFireSpecialAbilityUpdate
+				id="ModuleTag_WeaponFireSpecialAbilityUpdateTeleportStoredObjects"
+				SpecialPowerTemplate="SpecialPowerMastermindTeleportObject"
+				SpecialWeapon="UnEmpUnitsBriefly"
+				WhichSpecialWeapon="2"
+			/>
+		-->
 			<AISpecialPowerUpdate
 				id="A9A8386E"
 				CommandButtonName="Command_AlienMastermindSelectObjectsForTeleport"
@@ -1400,7 +1423,7 @@
 				DisabledTypesToContinueSoundsFor="HELD"
 				StartRechargeOnExit="False"
 				GoIdleInStartPreparation="True"
-				FaceTarget="True" />	
+				FaceTarget="True" />
 		</Behaviors>
 		<AI>
 			<AIUpdate
@@ -1504,8 +1527,8 @@
 			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
 			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
-			EvaEventSecondDamageFarFromFirstScanRange="600"    
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
+			EvaEventSecondDamageFarFromFirstScanRange="600"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
 			EvaEventAmbushed="UnitAmbushed"
 			EvaEnemyObjectSightedEvent="EnemyCommandoDetected"
 			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"

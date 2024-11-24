@@ -205,40 +205,45 @@
 				KillWhenRestingOnGround="False"
 				OrientToFlightPath="False"
 				IgnoreTerrainHeight="False" />
-				<!--
+		
 			<InvisibilityUpdate
-				id="3BD7F2F5"
-				Options="STARTS_ACTIVE BROADCAST"
-				UpdatePeriod="1s"
+				id="ModuleTag_Invisibility"
+				Options="BROADCAST STARTS_ACTIVE"
 				BroadcastRange="200"
-				OpacityMin="40%"
-				OpacityMax="100%">
+				UpdatePeriod="1.0s">
 				<InvisibilityNugget
-					ForbiddenConditions="PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_A USING_WEAPON_B USING_WEAPON_C"
-					ForbiddenConditionExceptions=""
-					ForbiddenWeaponSets=""
-					ForbiddenStatus="TIBERIUM_VIBRATING IS_FIRING_WEAPON USING_ABILITY IS_AIMING_WEAPON SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING"
-					CamouflageLevel="0"
-					InvisibilityType="STEALTH"
-					Options=""
-					EnteringStealthFX=""
-					LeavingStealthFX=""
 					HintDetectableStates="IS_ATTACKING"
-					NoStealthForAttackWindow="0s" />
+					ForbiddenConditions="PREATTACK_A FIRING_A FIRING_OR_PREATTACK_A RELOADING_A PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_A USING_WEAPON_B USING_WEAPON_C"
+					ForbiddenStatus="TIBERIUM_VIBRATING USING_ABILITY SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING" />
 				<BroadcastObjectFilter
 					Rule="ANY"
 					Relationship="ALLIES"
-					Alignment="NONE"
-					Include="STRUCTURE INFANTRY AIRCRAFT VEHICLE"
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="">
-					<IncludeThing>NODVertigoDisruptionPod</IncludeThing>
+					Include="STRUCTURE INFANTRY VEHICLE AIRCRAFT">
+					<IncludeThing>NODVertigoDisruptionStickyPod</IncludeThing>
+					<ExcludeThing>Viceroid</ExcludeThing>
+					<ExcludeThing>AlienCrystalShield</ExcludeThing>
+					<ExcludeThing>NODVenom</ExcludeThing>
 				</BroadcastObjectFilter>
 			</InvisibilityUpdate>
-			-->
+
+
+			<InvisibilityUpdate
+				id="ModuleTag_InvisibilityVenoms"
+				Options="BROADCAST STARTS_ACTIVE"
+				BroadcastRange="200"
+				UpdatePeriod="1.0s">
+				<InvisibilityNugget
+					HintDetectableStates="IS_ATTACKING"
+					ForbiddenConditions="PREATTACK_B FIRING_B FIRING_OR_PREATTACK_B RELOADING_B PREATTACK_C FIRING_C FIRING_OR_PREATTACK_C RELOADING_C USING_WEAPON_B USING_WEAPON_C"
+					ForbiddenStatus="USING_ABILITY SPECIAL_ABILITY_PACKING_UNPACKING_OR_USING" />
+				<BroadcastObjectFilter
+					Rule="NONE"
+					Relationship="ALLIES">
+					<IncludeThing>NODVenom</IncludeThing>
+					<IncludeThing>MarkedOfKaneVenom</IncludeThing>
+				</BroadcastObjectFilter>
+			</InvisibilityUpdate>
+		
 			<LifetimeUpdate
 				id="6D14780C"
 				MinLifetime="240s"

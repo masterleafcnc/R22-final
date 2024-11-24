@@ -427,9 +427,10 @@
         id="ModuleTag_TemporarilyDefect"
         DefectionFrameCount="300" />
 		
-			<StealthDetectorUpdate
-				id="ModuleTag_StealthDetect"
-				DetectionRange="100" />
+		<StealthDetectorUpdate 
+		id="ModuleTag_StealthDetect" 
+	  DetectionRange="100" 
+	  ExtraForbiddenKindOf="AIRCRAFT"/>
 			<Physics
 				id="ModuleTag_07" />
 			<ProductionUpdate

@@ -4105,9 +4105,6 @@
 			</LaserDraw>
 		</Draws>
 		<Behaviors>
-			<LaserState
-				id="ModuleTag_LaserState"
-				LaserId="0"></LaserState>
 			<AttributeModifierPoolUpdate
 				id="788FFB50" />
 			<SquishCollide
@@ -4318,6 +4315,9 @@
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
+			<LaserState
+				id="ModuleTag_LaserState"
+				LaserId="0"></LaserState>
 			<Physics
 				id="8018425E"
 				MaxXRotationVelocity="360"

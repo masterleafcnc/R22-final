@@ -1146,28 +1146,10 @@
 			<TemporarilyDefectUpdate
 				id="3473AFD2"
 				DefectionFrameCount="300" />
-			<StealthDetectorUpdate
-				id="70ED959C"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				DetectionRate="0.4s"
-				DetectionRange="100"
-				PingSound=""
-				LoudPingSound=""
-				IRBeaconParticleSys=""
-				IRParticleSys=""
-				IRBrightParticleSys=""
-				IRGridParticleSys=""
-				ExtraRequiredKindOf=""
-				ExtraForbiddenKindOf=""
-				RequiredUpgrade=""
-				InitiallyDisabled="False"
-				CanDetectWhileGarrisoned="False"
-				CanDetectWhileContained="False"
-				UseMetaAOI="False" />
+				<StealthDetectorUpdate 
+				id="ModuleTag_StealthDetect" 
+			  DetectionRange="100" 
+			  ExtraForbiddenKindOf="AIRCRAFT"/>
 			<Physics
 				id="C2B69CF1"
 				MaxXRotationVelocity="360"

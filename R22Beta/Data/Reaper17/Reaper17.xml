@@ -3,9 +3,11 @@
 
 	<Includes>
 		<Include source="Units/R17DevourerTank.xml" type="all"/>
-		<!--
-		<Include source="Units/R17Tripod.xml" type="all"/>	
 		<Include source="Units/r17eradicatorhexapod.xml" type="all"/>	
+		<Include source="Units/R17CustomizableVehicle.xml" type="all"/>
+		<Include source="Units/Reaper17Mothership.xml" type="all"/>
+
+		<Include source="Units/R17Tripod.xml" type="all"/>	
 
 		<Include source="Structures/R17Gateway.xml" type="all"/>
 		<Include source="Structures/R17Reactor.xml" type="all"/>
@@ -29,12 +31,11 @@
 		<Include source="Structures/R17Portal.xml" type="all"/>	
 		<Include source="Structures/R17SporePod.xml" type="all"/>	
 		<Include source="Units/reaper17annihilatortripodhusk.xml" type="all"/>
-		<Include source="Units/R17CustomizableVehicle.xml" type="all"/>
 		<Include source="Units/R17ShockTrooper.xml" type="all"/>
 		<Include source="Structures/R17Ref.xml" type="all"/>			
 		<Include source="Structures/R17WarpChasm.xml" type="all"/>
 		<Include source="Structures/Reaper17DronePlatform.xml" type="all"/> 
-	-->
+	
 	</Includes>
 
 </AssetDeclaration>

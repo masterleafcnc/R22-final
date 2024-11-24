@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<AssetDeclaration xmlns="uri:ea.com:eala:asset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<GameObject
 		id="GDIJuggernaught"
 		inheritFrom="BaseVehicle"
@@ -14,7 +15,7 @@
 		BuildTime="22"
 		BuildFadeInOnCreateTimeSeconds="0.25s"
 		CommandSet="GDIJuggernaughtCommandSet"
-		CommandPoints="100" 
+		CommandPoints="100"
 		KindOf="PRELOAD SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS SCORE VEHICLE VALID_TARGET_FOR_C4 SIEGE_WEAPON CAN_BE_FAVORITE_UNIT"
 		RadarPriority="UNIT"
 		ThreatLevel="10"
@@ -82,7 +83,7 @@
 						Name="W3DContainer:GUJugg_SKND" />
 					<Texture
 						Original="GUJugg_D"
-						New="GUJuggD_K" />						
+						New="GUJuggD_K" />
 					<ParticleSysBone
 						BoneName="B_PISTONLA"
 						FXParticleSystemTemplate="GDIDebrisSmallFire"
@@ -103,7 +104,7 @@
 						Name="W3DContainer:GUJugg_SKNR" />
 					<Texture
 						Original="GUJugg_D"
-						New="GUJuggD_K" />						
+						New="GUJuggD_K" />
 					<ParticleSysBone
 						BoneName="B_PISTONLA"
 						FXParticleSystemTemplate="GDIDebrisSmallFire"
@@ -128,8 +129,8 @@
 						BoneName="B_SHELL01"
 						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
 						FollowBone="true" />
-				</ModelConditionState>				
-				
+				</ModelConditionState>
+
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED">
@@ -191,8 +192,8 @@
 						Name="W3DContainer:GUJugg_SKN" />
 					<Texture
 						Original="GUJugg"
-						New="GUJugg_K" />						
-				</ModelConditionState>			
+						New="GUJugg_K" />
+				</ModelConditionState>
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					StateName="STATE_bored"
@@ -238,12 +239,12 @@
 						if Prev == "STATE_Selected" or Prev == "ATNB" or Prev == "STATE_Run" then
 						CurDrawableSetTransitionAnimState("TRANS_SelectedToIdle")
 						end
-					</Script>	
-				</AnimationState>	
-				<AnimationState 	
-					ParseCondStateType="PARSE_NORMAL" 	
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="FORMATION_PREVIEW">
-				</AnimationState>						
+				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="COMING_OUT_OF_FACTORY"
@@ -253,7 +254,7 @@
 						AnimationBlendTime="0"
 						AnimationMode="ONCE" />
 				</AnimationState>
-<!--
+				<!--
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="JUST_BUILT"
@@ -275,7 +276,7 @@
 					<Animation
 						AnimationName="GUJugg_DIED"
 						AnimationMode="ONCE" />
-          <!--		<Animation
+					<!--		<Animation
 						AnimationName="GUJugg_DIEA"
 						AnimationMode="ONCE" />		DIEA is reserved for the commando death.	-->
 				</AnimationState>
@@ -285,11 +286,11 @@
 					<Animation
 						AnimationName="GUJugg_BIDA"
 						AnimationMode="MANUAL"
-						AnimationBlendTime="15"/>
+						AnimationBlendTime="15" />
 				</AnimationState>
 
-<!-- being fixed by engineer from being a husk -->
-		        <AnimationState
+				<!-- being fixed by engineer from being a husk -->
+				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_5">
 					<Animation
@@ -497,7 +498,7 @@
 						CurDrawableSetTransitionAnimState("TRANS_IdleToSelected") end
 					</Script>
 				</AnimationState>
-				
+
 				<!-- TRANSITIONS -->
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
@@ -536,6 +537,82 @@
 			</ScriptedModelDraw>
 		</Draws>
 		<Behaviors>
+
+			<AttributeModifierPoolUpdate
+				id="DefaultAttributeModifierPoolUpdate" />
+			<SquishCollide
+				id="DefaultSquishCollide" />
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<!--Heroic
+			level units auto healing-->
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="100"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<StancesBehavior
+				id="ModuleTag_Stance"
+				StanceTemplate="Generic"
+			/>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+			<!-- Nod Cloaking Field -->
+			<InvisibilityUpdate
+				id="ModuleTag_Invisibility"
+				UpdatePeriod="0.5s">
+				<InvisibilityNugget />
+				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
+			</InvisibilityUpdate>
+			<StealthUpgrade
+				id="ModuleTag_InvisibilityTrigger">
+				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
+			</StealthUpgrade>
+			<TemporarilyDefectUpdate
+				id="ModuleTag_TemporarilyDefect"
+				DefectionFrameCount="300" />
+
 			<WeaponSetUpdate
 				id="ModuleTag_WeaponSetUpdate">
 				<WeaponSlotTurret
@@ -546,7 +623,7 @@
 					<Weapon
 						Ordering="PRIMARY_WEAPON"
 						Template="GDIJuggernaughtArtillery" />
-					<TurretSettings 
+					<TurretSettings
 						TurretTurnRate="40"
 						TurretPitchRate="20"
 						AllowsPitch="true"
@@ -563,7 +640,8 @@
 							TargetingCompareList="DefaultTurretTargetingCompareList"
 							ActiveWhenPerformingSpecialAbility="False"
 							CanAcquireDynamicIfAssignedOutOfRange="False"
-							CanPickTargetsOutOfTurretAngle="False" />  <!-- changed turretturnrate from 50 to 40 in R19 -->
+							CanPickTargetsOutOfTurretAngle="False" />  <!-- changed turretturnrate
+						from 50 to 40 in R19 -->
 					</TurretSettings>
 				</WeaponSlotTurret>
 			</WeaponSetUpdate>
@@ -589,7 +667,7 @@
 			<AISpecialPowerUpdate
 				id="ModuleTag_JuggernautBombard"
 				CommandButtonName="Command_SpotTargetBombard"
-        SpecialPowerRadius="375"
+				SpecialPowerRadius="375"
 				SpecificUnit="GDISniper"
 				SpecialPowerAIType="SPECIAL_POWER_SPECIFIC_UNIT" />
 			<Physics
@@ -624,79 +702,7 @@
 				AddConditionFlags="USER_6">
 				<TriggeredBy>Upgrade_AllFactionUpgrade</TriggeredBy>
 			</ModelConditionUpgrade>
-			<AttributeModifierPoolUpdate 
-				id="DefaultAttributeModifierPoolUpdate"/>
-			<SquishCollide
-				id ="DefaultSquishCollide"/>
-			<FireWeaponWhenDead
-				id="ModuleTag_CatalystDeathWeapon"
-				InitiallyActive="true"
-				DeathWeapon="CatalystInfantryDeathWeapon"
-				ContinueToBezierDestination="false">
-				<DieMuxData DeathTypes="CATALYST" />
-			</FireWeaponWhenDead>
-			<!--Heroic level units auto healing-->
-			<AutoHealBehavior
-				id="Upgrade_HeroicHeal"
-				InitiallyActive="false"
-				HealOnlyIfNotInCombat="false"
-				HealOnlyIfNotUnderAttack="false"
-				StartHealingDelay="1s"
-				HealingAmount="100"
-				HealingDelay=".5s">
-				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
-			</AutoHealBehavior>
-			<AttributeModifierUpgrade
-				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
-				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
-				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
-			</AttributeModifierUpgrade>
-			<AttributeModifierUpgrade
-				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
-				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
-				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
-			</AttributeModifierUpgrade>
-			<AttributeModifierUpgrade
-				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
-				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
-				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
-			</AttributeModifierUpgrade>
-			<StancesBehavior
-				id="ModuleTag_Stance"
-				StanceTemplate="Generic"
-				/>
-			<LevelUpUpgrade
-				id="ModuleTag_LevelUpUpgrade_Veteran"
-				LevelCap="4"
-				LevelsToGain="1">
-				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
-			</LevelUpUpgrade>
-			<LevelUpUpgrade
-				id="ModuleTag_LevelUpUpgrade_Elite"
-				LevelCap="4"
-				LevelsToGain="2">
-				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
-			</LevelUpUpgrade>
-			<LevelUpUpgrade
-				id="ModuleTag_LevelUpUpgrade_Heroic"
-				LevelCap="4"
-				LevelsToGain="3">
-				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
-			</LevelUpUpgrade>
-			<!-- Nod Cloaking Field -->
-			<InvisibilityUpdate
-				id="ModuleTag_Invisibility"
-				UpdatePeriod="0.5s">
-				<InvisibilityNugget />
-				<RequiresUpgrade>Upgrade_CloakingFieldInvisibility</RequiresUpgrade>
-			</InvisibilityUpdate>
-			<StealthUpgrade
-				id="ModuleTag_InvisibilityTrigger">
-				<TriggeredBy>Upgrade_CloakingFieldInvisibility</TriggeredBy>
-			</StealthUpgrade>
-      <TemporarilyDefectUpdate
-        id="ModuleTag_TemporarilyDefect"
-        DefectionFrameCount="300" />
+
 		</Behaviors>
 		<AI>
 			<DeployStyleAIUpdate
@@ -720,32 +726,58 @@
 		<ClientBehaviors>
 			<AnimationSoundClientBehavior
 				id="ModuleTag_ASCB">
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_ABTA" Frame="27 65" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_AIFA" Frame="112" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_ATKA1" Frame="12" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_ATKA3" Frame="14" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_ATKB1" Frame="13" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_ATKB3" Frame="11" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BATA" Frame="28 44" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BATB" Frame="37 51" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BIFA" Frame="118" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BIFB" Frame="30 88 294" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BIFC" Frame="41 90" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BIFD" Frame="234" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BLDA" Frame="75 94 112" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BLDA" Frame="75 94 112" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_DECL" Frame="16" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_DIEA" Frame="60 79" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_DIEB" Frame="5 63" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_DIEC" Frame="7 23 43 78 105 130" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_DIED" Frame="22 43 89 94 101" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_GTPA" Frame="61 101 119" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Recovered1" Animation="GUJUGG_GTPA" Frame="40" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Recovered2" Animation="GUJUGG_GTPA" Frame="70" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_TRNL" Frame="14 30" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_TRNR" Frame="14 30" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_WLKA" Frame="0 25" />
-				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_WLKB" Frame="0 25" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_ABTA"
+					Frame="27 65" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_AIFA"
+					Frame="112" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_ATKA1"
+					Frame="12" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_ATKA3"
+					Frame="14" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_ATKB1"
+					Frame="13" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_ATKB3"
+					Frame="11" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BATA"
+					Frame="28 44" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BATB"
+					Frame="37 51" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BIFA"
+					Frame="118" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BIFB"
+					Frame="30 88 294" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BIFC"
+					Frame="41 90" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BIFD"
+					Frame="234" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BLDA"
+					Frame="75 94 112" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_BLDA"
+					Frame="75 94 112" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_DECL"
+					Frame="16" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_DIEA"
+					Frame="60 79" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_DIEB"
+					Frame="5 63" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_DIEC"
+					Frame="7 23 43 78 105 130" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_DIED"
+					Frame="22 43 89 94 101" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_GTPA"
+					Frame="61 101 119" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Recovered1" Animation="GUJUGG_GTPA"
+					Frame="40" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Recovered2" Animation="GUJUGG_GTPA"
+					Frame="70" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_TRNL"
+					Frame="14 30" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_TRNR"
+					Frame="14 30" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_WLKA"
+					Frame="0 25" />
+				<Sound Sound="AudioEvent:GDI_Juggernaught_Footstep" Animation="GUJUGG_WLKB"
+					Frame="0 25" />
 			</AnimationSoundClientBehavior>
 		</ClientBehaviors>
 		<Geometry
@@ -772,7 +804,7 @@
 			<AudioEntry
 				Sound="AudioEvent:GDI_Juggernaught_VoiceMoveAttack"
 				AudioType="voiceAttackAfterMoving" />
-      <AudioEntry
+			<AudioEntry
 				Sound="Multisound:GDI_Juggernaught_VoiceRetreatMS"
 				AudioType="voiceRetreatToCastle" />
 			<AudioEntry
@@ -798,18 +830,18 @@
 		</AudioArraySound>
 		<EvaEvents
 			EvaEventDieOwner="UnitLost"
-			EvaEventProductionStarted="UnitConstructionStarted" 
-			EvaEventDamagedOwner="UnitUnderAttack" 	
+			EvaEventProductionStarted="UnitConstructionStarted"
+			EvaEventDamagedOwner="UnitUnderAttack"
 			EvaEventDamagedFromShroudedSourceOwner="UnitUnderAttackFromShroudedUnit"
-			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"  
-			EvaEventAmbushed="UnitAmbushed" 
-			EvaEventSecondDamageFarFromFirstScanRange="600"    
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000" 
-			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted" 
+			EvaEventDamagedByFireOwner="GenericUnitBeingBurned"
+			EvaEventAmbushed="UnitAmbushed"
+			EvaEventSecondDamageFarFromFirstScanRange="600"
+			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
+			EvaEnemyObjectSightedEvent="GenericEnemyUnitSighted"
 			EvaEventDetectedEnemy="EnemyStealthUnitDiscovered"
 			EvaEventAvailableForProduction="NewConstructionOptions"
 			EvaEventBuildOnHold="BuildOnHold"
-			EvaEventBuildCancelled="BuildCancelled" 
+			EvaEventBuildCancelled="BuildCancelled"
 			EvaEventPromotedOwner="UnitPromoted" />
 		<ShadowInfo
 			Type="VOLUME" />

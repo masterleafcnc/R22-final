@@ -931,10 +931,6 @@
 			</LaserDraw>
 		</Draws>
 		<Behaviors>
-
-			<RandomModelCondition
-				id="ModuleTag_RandomSkin"
-				Conditions="USER_1 USER_2 USER_3 USER_4 USER_6" /> 
 				
 			<AttributeModifierPoolUpdate
 				id="788FFB50" />
@@ -1125,6 +1121,10 @@
 						ObjectStatus="WEAPON_UPGRADED_01 WEAPON_UPGRADED_02" />
 				</WeaponSlotHardpoint>
 			</WeaponSetUpdate>
+
+			<RandomModelCondition
+				id="ModuleTag_RandomSkin"
+				Conditions="USER_1 USER_2 USER_3 USER_4 USER_6" /> 
 			
 			<StatusBitsUpgrade
 				id="ModuleTag_UpgradeWeapon"
@@ -2117,7 +2117,7 @@
 				IRGridParticleSys=""
 				IRParticleSysBone=""
 				ExtraRequiredKindOf=""
-				ExtraForbiddenKindOf=""
+				ExtraForbiddenKindOf="AIRCRAFT"
 				RequiredUpgrade=""
 				InitiallyDisabled="False"
 				CanDetectWhileGarrisoned="False"
@@ -3437,7 +3437,7 @@
 				IRGridParticleSys=""
 				IRParticleSysBone=""
 				ExtraRequiredKindOf=""
-				ExtraForbiddenKindOf=""
+				ExtraForbiddenKindOf="AIRCRAFT"
 				RequiredUpgrade=""
 				InitiallyDisabled="False"
 				CanDetectWhileGarrisoned="False"

@@ -1233,12 +1233,63 @@
 
 		<Geometry
 			IsSmall="true">
+			
+			
 			<Shape
 				Type="BOX"
 				MajorRadius="14.0"
 				MinorRadius="7.0"
 				Height="11.5"
 				ContactPointGeneration="VEHICLE" />
+			
+				
+				<!-- PITBULL SHAPES -->
+				<!--
+			<Shape
+				Type="BOX"
+				MajorRadius="1"
+				MinorRadius="9"
+				Height="11.5"
+				FrontAngle="0d"
+				Active="True"
+				ContactPointGeneration="VEHICLE"
+				UsedForHealthBox="True">
+				<Offset
+					x="16.0"
+					y="0.0"
+					z="0.0" />
+			</Shape>
+			
+			<Shape
+				Type="BOX"
+				MajorRadius="8"
+				MinorRadius="1"
+				Height="11.5"
+				FrontAngle="0d"
+				Active="True"
+				ContactPointGeneration="VEHICLE"
+				UsedForHealthBox="True">
+				<Offset
+					x="8.0"
+					y="9"
+					z="0.0" />
+			</Shape>
+			
+			<Shape
+				Type="BOX"
+				MajorRadius="8"
+				MinorRadius="1"
+				Height="11.5"
+				FrontAngle="0d"
+				Active="True"
+				ContactPointGeneration="VEHICLE"
+				UsedForHealthBox="True">
+				<Offset
+					x="8.0"
+					y="-9"
+					z="0.0" />
+			</Shape>
+				-->
 		</Geometry>
 
 		<AudioArrayVoice>
@@ -1343,7 +1394,7 @@
 	
 	<!-- /////////////////////////////////////////////////////////// VET PITBULL //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-
+	
 	<GameObject
 		id="GDIPitbull_Veteran"
 		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS PRELOAD SCORE ATTACK_NEEDS_LINE_OF_SIGHT CAN_REVERSE_MOVE VEHICLE CAN_BE_FAVORITE_UNIT"

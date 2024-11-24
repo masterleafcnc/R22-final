@@ -596,6 +596,78 @@
 			</LaserDraw>			
 		</Draws>
 		<Behaviors>
+
+			<AttributeModifierPoolUpdate 
+				id="DefaultAttributeModifierPoolUpdate"/>
+			<SquishCollide
+				id ="DefaultSquishCollide"/>
+			<CrushDie
+				id="ModuleTAg_CrushDie">
+				<DieMuxData
+					DeathTypes="CRUSHED" />
+			</CrushDie>
+			<FXListBehavior
+				id="SquishedFXPlayer">
+				<DieMuxData
+					DeathTypes="CRUSHED" />
+				<Event
+					Index="onDeath"
+					FX="FX_InfantrySquished" />
+			</FXListBehavior>
+			<FireWeaponWhenDead
+				id="ModuleTag_CatalystDeathWeapon"
+				InitiallyActive="true"
+				DeathWeapon="CatalystInfantryDeathWeapon"
+				ContinueToBezierDestination="false">
+				<DieMuxData DeathTypes="CATALYST" />
+			</FireWeaponWhenDead>
+			<AutoHealBehavior
+				id="Upgrade_HeroicHeal"
+				InitiallyActive="false"
+				HealOnlyIfNotInCombat="false"
+				HealOnlyIfNotUnderAttack="false"
+				StartHealingDelay="1s"
+				HealingAmount="10"
+				HealingDelay=".5s">
+				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
+			</AutoHealBehavior>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<AttributeModifierUpgrade
+				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
+				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
+				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
+			</AttributeModifierUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Veteran"
+				LevelCap="4"
+				LevelsToGain="1">
+				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Elite"
+				LevelCap="4"
+				LevelsToGain="2">
+				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
+			</LevelUpUpgrade>
+			<LevelUpUpgrade
+				id="ModuleTag_LevelUpUpgrade_Heroic"
+				LevelCap="4"
+				LevelsToGain="3">
+				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
+			</LevelUpUpgrade>
+      <TemporarilyDefectUpdate
+        id="ModuleTag_TemporarilyDefect"
+        DefectionFrameCount="300" />			
+
 			<WeaponSetUpdate
 					  id="ModuleTag_WeaponSetUpdate">
 				<WeaponSlotHardpoint
@@ -641,9 +713,10 @@
 				LevelsToGain="4">
 			<TriggeredBy>Upgrade_BlackHandFaction</TriggeredBy>
 			</LevelUpUpgrade>  
-			<StealthDetectorUpdate
-					  id="ModuleTag_StealthDetect"
-					  DetectionRange="100" />
+			<StealthDetectorUpdate 
+			id="ModuleTag_StealthDetect" 
+		  DetectionRange="100" 
+		  ExtraForbiddenKindOf="AIRCRAFT"/>
 			<!-- Special Powers -->
 			<!-- Walk up and place non-sticky satchel charge (on buildings) -->
 			<SpecialPower
@@ -734,76 +807,7 @@
 				StatusToSet="WEAPON_UPGRADED_01">
 				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
 			</StatusBitsUpgrade>
-<AttributeModifierPoolUpdate 
-				id="DefaultAttributeModifierPoolUpdate"/>
-			<SquishCollide
-				id ="DefaultSquishCollide"/>
-			<CrushDie
-				id="ModuleTAg_CrushDie">
-				<DieMuxData
-					DeathTypes="CRUSHED" />
-			</CrushDie>
-			<FXListBehavior
-				id="SquishedFXPlayer">
-				<DieMuxData
-					DeathTypes="CRUSHED" />
-				<Event
-					Index="onDeath"
-					FX="FX_InfantrySquished" />
-			</FXListBehavior>
-			<FireWeaponWhenDead
-				id="ModuleTag_CatalystDeathWeapon"
-				InitiallyActive="true"
-				DeathWeapon="CatalystInfantryDeathWeapon"
-				ContinueToBezierDestination="false">
-				<DieMuxData DeathTypes="CATALYST" />
-			</FireWeaponWhenDead>
-			<AutoHealBehavior
-				id="Upgrade_HeroicHeal"
-				InitiallyActive="false"
-				HealOnlyIfNotInCombat="false"
-				HealOnlyIfNotUnderAttack="false"
-				StartHealingDelay="1s"
-				HealingAmount="10"
-				HealingDelay=".5s">
-				<TriggeredBy>Upgrade_Veterancy_HEROIC</TriggeredBy>
-			</AutoHealBehavior>
-			<AttributeModifierUpgrade
-				id="ModuleTag_AttributeModifierUpgradeMUCSpeed"
-				AttributeModifier="Modifier_MultifunctionUpgradeCenterSpeed">
-				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterSpeed</TriggeredBy>
-			</AttributeModifierUpgrade>
-			<AttributeModifierUpgrade
-				id="ModuleTag_AttributeModifierUpgradeMUCDamage"
-				AttributeModifier="Modifier_MultifunctionUpgradeCenterDamage">
-				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterDamage</TriggeredBy>
-			</AttributeModifierUpgrade>
-			<AttributeModifierUpgrade
-				id="ModuleTag_AttributeModifierUpgradeMUCArmor"
-				AttributeModifier="Modifier_MultifunctionUpgradeCenterArmor">
-				<TriggeredBy>Upgrade_MultifunctionUpgradeCenterArmor</TriggeredBy>
-			</AttributeModifierUpgrade>
-			<LevelUpUpgrade
-				id="ModuleTag_LevelUpUpgrade_Veteran"
-				LevelCap="4"
-				LevelsToGain="1">
-				<TriggeredBy>Upgrade_ProductionVeterancy_VETERAN</TriggeredBy>
-			</LevelUpUpgrade>
-			<LevelUpUpgrade
-				id="ModuleTag_LevelUpUpgrade_Elite"
-				LevelCap="4"
-				LevelsToGain="2">
-				<TriggeredBy>Upgrade_ProductionVeterancy_ELITE</TriggeredBy>
-			</LevelUpUpgrade>
-			<LevelUpUpgrade
-				id="ModuleTag_LevelUpUpgrade_Heroic"
-				LevelCap="4"
-				LevelsToGain="3">
-				<TriggeredBy>Upgrade_ProductionVeterancy_HEROIC</TriggeredBy>
-			</LevelUpUpgrade>
-      <TemporarilyDefectUpdate
-        id="ModuleTag_TemporarilyDefect"
-        DefectionFrameCount="300" />			
+
 		</Behaviors>
 		<AI>
 			<AIUpdate

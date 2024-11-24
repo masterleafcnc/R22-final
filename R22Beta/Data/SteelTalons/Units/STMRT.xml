@@ -499,58 +499,6 @@
 		</Draws>
 		<Behaviors> 
 
-		<WeaponSetUpdate
-				id="720F4A50">
-				<WeaponSlotTurret
-					ID="1"
-					InterleavedStyle="INTERLEAVE_RANDOM"
-					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
-					AllowInterleavedFiring="False">
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="MRTFakeWeapon"
-						Upgrade=""
-						ObjectStatus=""
-						IsPlayerUpgradePermanent="False" /> 
-					<Weapon
-						Ordering="PRIMARY_WEAPON"
-						Template="MRTFakeWeaponRepair"
-						Upgrade=""
-						ObjectStatus=""
-						IsPlayerUpgradePermanent="False" /> 						
-					<TurretSettings
-						TurretTurnRate="200"
-						TurretPitchRate="200"
-						MinimumPitch="0d"
-						PitchHeight="50%"
-						ControlledWeaponSlots=""
-						MinIdleScanTime="1s"
-						MaxIdleScanTime="5s"
-						MinIdleScanAngle="0"
-						MaxIdleScanAngle="45"
-						MaxDeflectionClockwise="180d"
-						MaxDeflectionAntiClockwise="180d"
-						NaturalTurretAngle="0d"
-						AllowsPitch="False"
-						RecenterWhenOutOfTurnRange="True">
-						<TurretAITargetChooserData
-							IdleScanDelay="0.1s"
-							ReacquireDelay="0.5s"
-							StartupDelay="0s"
-							SympathyRange="25"
-							CheckVisionRange="False"
-							CanPickDynamicTargets="True"
-							RotateToTargetWhenAiming="True"
-							CanAutoAcquireNonAutoAcquirable="False"
-							TargetingCompareList="DefaultTurretTargetingCompareList"
-							ActiveWhenPerformingSpecialAbility="True"
-							CanAcquireDynamicIfAssignedOutOfRange="True"
-							CanPickTargetsOutOfTurretAngle="True" />
-					</TurretSettings>
-				</WeaponSlotTurret>
-			</WeaponSetUpdate> 
-
-
 			<AttributeModifierPoolUpdate
 				id="513BC476" />
 			<SquishCollide
@@ -706,6 +654,58 @@
 			<TemporarilyDefectUpdate
 				id="3473AFD2"
 				DefectionFrameCount="300" />
+
+		<WeaponSetUpdate
+				id="720F4A50">
+				<WeaponSlotTurret
+					ID="1"
+					InterleavedStyle="INTERLEAVE_RANDOM"
+					WeaponChoiceCriteria="PREFER_MOST_DAMAGE"
+					AllowInterleavedFiring="False">
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MRTFakeWeapon"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" /> 
+					<Weapon
+						Ordering="PRIMARY_WEAPON"
+						Template="MRTFakeWeaponRepair"
+						Upgrade=""
+						ObjectStatus=""
+						IsPlayerUpgradePermanent="False" /> 						
+					<TurretSettings
+						TurretTurnRate="200"
+						TurretPitchRate="200"
+						MinimumPitch="0d"
+						PitchHeight="50%"
+						ControlledWeaponSlots=""
+						MinIdleScanTime="1s"
+						MaxIdleScanTime="5s"
+						MinIdleScanAngle="0"
+						MaxIdleScanAngle="45"
+						MaxDeflectionClockwise="180d"
+						MaxDeflectionAntiClockwise="180d"
+						NaturalTurretAngle="0d"
+						AllowsPitch="False"
+						RecenterWhenOutOfTurnRange="True">
+						<TurretAITargetChooserData
+							IdleScanDelay="0.1s"
+							ReacquireDelay="0.5s"
+							StartupDelay="0s"
+							SympathyRange="25"
+							CheckVisionRange="False"
+							CanPickDynamicTargets="True"
+							RotateToTargetWhenAiming="True"
+							CanAutoAcquireNonAutoAcquirable="False"
+							TargetingCompareList="DefaultTurretTargetingCompareList"
+							ActiveWhenPerformingSpecialAbility="True"
+							CanAcquireDynamicIfAssignedOutOfRange="True"
+							CanPickTargetsOutOfTurretAngle="True" />
+					</TurretSettings>
+				</WeaponSlotTurret>
+			</WeaponSetUpdate> 
+		
 			<ProductionUpdate
 				id="34FE0D85"
 				MaxQueueEntries="99"

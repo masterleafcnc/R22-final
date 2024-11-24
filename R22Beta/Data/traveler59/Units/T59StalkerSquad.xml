@@ -130,9 +130,10 @@
 						Template="StalkerRangefinder" />
 				</WeaponSlotHardpoint>
 			</WeaponSetUpdate>
-			<StealthDetectorUpdate
-				id="ModuleTag_StealthDetect"
-				DetectionRange="100" />
+			<StealthDetectorUpdate 
+			id="ModuleTag_StealthDetect" 
+		  DetectionRange="100" 
+		  ExtraForbiddenKindOf="AIRCRAFT"/>
 			<Physics
 				id="ModuleTag_Physics"></Physics>
 			<HordeContain

@@ -7,8 +7,11 @@
 		<Include source="Units/MarkedofKaneBunkerTruck.xml" type="all"/>
 		<Include source="Units/MoKAvatar.xml" type="all"/> 
 		<Include source="Units/MarkedOfKaneMilitantRocketSquad.xml" type="all"/> 
-<!--
-		<Include source="Units/markedofkanebeamcannon.xml" type="all"/>  
+		<Include source="Units/markedofkanebeamcannon.xml" type="all"/>
+		<Include source="Structures/MoKPropagandaTower.xml" type="all"/>
+		<Include source="Structures/MarkedOfKaneDisruptionTower.xml" type="all"/>
+		<Include source="Units/markedofkanemobileartillery.xml" type="all"/>  
+
 		<Include source="Structures/MoKPowerPlant.xml" type="all" /> 
 		<Include source="Units/MOKAwakenedSquad.xml" type="all"/>	
 		<Include source="Units/MoKHarvester.xml" type="all"/>
@@ -33,10 +36,9 @@
 		<Include source="Units/MarkedOfKaneMilitantRocket.xml" type="all"/> 
 		<Include source="Units/MOKEnlightened.xml" type="all"/>
 		<Include source="Units/markedofkaneattackbike.xml" type="all"/> 
-		<Include source="Structures/MoKPropagandaTower.xml" type="all"/>
-		<Include source="Structures/MarkedOfKaneDisruptionTower.xml" type="all"/>
+
 		<Include source="Structures/MarkedOfKaneShredderTurret.xml" type="all"/>
-		<Include source="Units/markedofkanemobileartillery.xml" type="all"/>   
+ 
 		<Include source="Structures/MG_MoK_WarmechFacility.xml" type="all"/>
 		<Include source="Units/MOKEnlightenedSquad.xml" type="all"/>
 		<Include source="Units/markedofkanesaboteur.xml" type="all"/> 
@@ -54,7 +56,7 @@
 		<Include source="Structures/MoKTechCenter.xml" type="all"/>
 		<Include source="Structures/MoKDropZone.xml" type="all"/>
 		<Include source="Structures/MoKhandofnod.xml" type="all"/>
-	-->
+	
 	</Includes>
 
 </AssetDeclaration>

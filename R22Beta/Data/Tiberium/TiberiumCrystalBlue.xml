@@ -506,7 +506,7 @@
 				<FireWeaponNugget
 					WeaponName="BlueTiberiumWeapon"
 					FireDelay="0s"
-					FireInterval="0.4s"
+					FireInterval="0.1s"
 					OneShot="False" />
 				<FireWeaponNugget
 					WeaponName="MARVTiberiumFXWeapon"

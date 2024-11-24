@@ -118,7 +118,7 @@
 	</UpgradeTemplate>
 
 	<!-- beam venom fix -->
-	
+	<!--
 	<UpgradeTemplate
 		id="Upgrade_Reflector"
 		Type="OBJECT"
@@ -132,7 +132,7 @@
 		SkirmishAIHeuristic="INVALID"
 		Options="DO_NOT_TRANSFER"
 		WaypointQueueable="False" />
-
+-->
 	<!-- quad turret cost and build time increased because 1000$ was deemed too cheap for the extra damage (Removed in R20) -->
 
 	<UpgradeTemplate id="Upgrade_NODQuadTurrets"
@@ -186,7 +186,7 @@
 		IconImage="Button_Upgrade_SuperCharBeam">
 	</UpgradeTemplate>
 	
-	<!-- stratofighter cost/build time increased to 1500/45s respectively as a precaution for the fence nerf -->
+	<!-- stratofighter cost/build time increased to 2000/60s respectively as a precaution for the fence nerf -->
 	<UpgradeTemplate id="Upgrade_FirehawkStratofighterBooster"
 		inheritFrom="BasePurchasableUpgrade" 
 		DisplayName="UpgradeName:FirehawkStratofighterBooster"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
-<!--
+	<!--
 	<LogicCommandSet
 	 id="SteelTalonsCombatEngineerCommandSet">
 		<Cmd>Command_SteelTalonsCallForTransportInfantry</Cmd>
@@ -22,13 +22,27 @@
 		<Cmd>Command_Uncombine3</Cmd>
 	</LogicCommandSet>
 -->
+
+	<!-- mastermind command added.-->
+	 <!--
+	<LogicCommandSet
+		id="AlienMastermindCommandSet">
+		<Cmd>Command_AlienMastermindSelectObjectsForTeleport</Cmd>
+		<Cmd>Command_AlienMastermindTeleportObjects</Cmd>
+		<Cmd>Command_AlienMastermindManipulatorDevice</Cmd>
+		<Cmd>Command_AttackMove</Cmd>
+	</LogicCommandSet>
+-->
+	<!-- <Cmd>Command_AlienMastermindTeleportObjects</Cmd>
+		<Cmd>Command_TempRemoveEMP</Cmd>-->
+
 	<LogicCommandSet
 		id="MarkedOfKaneSecretShrineCommandSet">
 		<Cmd>Command_PurchaseUpgradeCyberneticLegs</Cmd>
 		<Cmd>Command_PurchaseUpgradeMoKTiberiumInfusion</Cmd>
 		<Cmd>Command_RedShadowStrikeTeam</Cmd>
 	</LogicCommandSet>
-	
+
 	<LogicCommandSet
 		id="NODOperationsCenterCommandSet">
 		<Cmd>Command_UpgradeNODDozerBlades</Cmd>
@@ -55,7 +69,7 @@
 		<Cmd>Command_FireRadarJammingMissile</Cmd>
 		<Cmd>Command_PurchaseUpgradeNODQuadTurrets</Cmd>
 	</LogicCommandSet>
-	
+
 	<!-- hex fix -->
 	<!--
 	<LogicCommandSet
@@ -68,7 +82,7 @@
 	-->
 
 	<LogicCommandSet
-	id="Traveler59BlinkMastermindCommandSet">
+		id="Traveler59BlinkMastermindCommandSet">
 		<Cmd>Command_AlienMastermindSelectObjectsForTeleport</Cmd>
 		<Cmd>Command_AlienMastermindTeleportObjects</Cmd>
 		<Cmd>Command_UseTraveler59ProdigyBlinkPack</Cmd>
@@ -78,25 +92,25 @@
 	</LogicCommandSet>
 
 	<!-- remove those pitbull abilities and test for slot position -->
-	
+
 	<LogicCommandSet
 		id="GDIPitbullCommandSet">
 		<Cmd>Command_GDICallForTransportVehicle</Cmd>
 		<Cmd>Command_AttackMove</Cmd>
 	</LogicCommandSet>
-	
+
 	<LogicCommandSet
 		id="SteelTalonsPitbullCommandSet">
 		<Cmd>Command_SteelTalonsCallForTransportVehicle</Cmd>
 		<Cmd>Command_AttackMove</Cmd>
 	</LogicCommandSet>
-	
+
 	<LogicCommandSet
 		id="ZOCOMPitbullCommandSet">
 		<Cmd>Command_ZOCOMCallForTransportVehicle</Cmd>
 		<Cmd>Command_AttackMove</Cmd>
 	</LogicCommandSet>
-	
+
 	<LogicCommandSet
 		id="SteelTalonsTechCenterCommandSet">
 		<Cmd>Command_PurchaseUpgradePitbullMortar</Cmd>
@@ -108,5 +122,3 @@
 	</LogicCommandSet>
 
 </AssetDeclaration>
-
-

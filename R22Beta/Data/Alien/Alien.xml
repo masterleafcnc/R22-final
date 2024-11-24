@@ -2,15 +2,21 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<Includes>	
+		<Include source="Units/mastermind.xml" type="all"/> 
+
 		<!--<Include source="Units/AlienBuzzers.xml" type="all"/> -->
 		<!-- REMOVE BUZZER AFTER TESTING -->
+
 		<Include source="Units/AlienCrystalShield.xml" type="all"/> 
 		<Include source="Structures/MutantHovel.xml" type="all"/>
+		<Include source="Structures/AlienReconstructionBaseSpawned.xml" type="all"/>
 		<Include source="Units/alieneradicatorhexapod.xml" type="all"/> 
 		<Include source="Units/AlienWormHole.xml" type="all"/> 
 		<Include source="Units/AlienDevourerTank.xml" type="all"/> 
-		<!--<Include source="Props/NeutralViceroidSpittleWeaponProjectile.xml" type="all"/> -->
-		<!--
+		<Include source="Units/AlienCustomizableVehicle.xml" type="all"/> 
+		<Include source="Units/AlienMothership.xml" type="all"/> 
+		<Include source="Units/AlienInvaderFighter.xml" type="all"/> 
+	
 	
 		<Include source="Structures/AlienGateway.xml" type="all"/>
 		<Include source="Structures/AlienReactor.xml" type="all"/>
@@ -32,7 +38,6 @@
 		<Include source="Units/AlienExplorer.xml" type="all"/> 
 		<Include source="Units/AlienMillipedeBody.xml" type="all"/>
 		<Include source="Units/AlienHarv.xml" type="all"/>
-		<Include source="Units/mastermind.xml" type="all"/> 
 		<Include source="Units/AlienStalker.xml" type="all"/>
 		<Include source="Units/AlienStalkerSquad.xml" type="all"/>
 	
@@ -45,7 +50,6 @@
 		<Include source="Units/AlienDevastatorWarship.xml" type="all"/> 
 		<Include source="Props/AlienTibAgitationProjectile.xml" type="all"/>
 		<Include source="Units/AlienMillipedeBody.xml" type="all"/>
-		<Include source="Units/AlienCustomizableVehicle.xml" type="all"/> 
 		
 		<Include source="Structures/AlienSporePod.xml" type="all"/>
 		<Include source="Structures/AlienPortal.xml" type="all"/>
@@ -55,7 +59,8 @@
 		<Include source="Structures/AlienWarpChasm.xml" type="all"/>
 		<Include source="Structures/AlienTibHive.xml" type="all"/>
 		<Include source="Structures/AlienDronePlatform.xml" type="all"/>
-		-->
+
+			<!--<Include source="Props/NeutralViceroidSpittleWeaponProjectile.xml" type="all"/> -->
 			<!--<Include source="Units/AlienAnnihilatorTripodHusk.xml" type="all"/> -->
 		<!---->
 	</Includes>

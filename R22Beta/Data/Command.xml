@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
-<!--
+  <!--
 	<LogicCommand
 		Type="SPECIAL_POWER"
 		id="COmmand_CaptureBuilding2"
@@ -8,7 +8,7 @@
 		<SpecialPower>SpecialPower_EngineerCapture</SpecialPower>
 	</LogicCommand>
 	-->
-<!--
+  <!--
 	 <LogicCommand
 		Type="SPECIAL_POWER"
 		id="Command_Uncombine2">
@@ -28,14 +28,30 @@
   </LogicCommand>
 
 -->
-	<LogicCommand
-        Type="SPECIAL_POWER"
-            Options="NEED_TARGET_ENEMY_OBJECT"
-        id="Command_FireTiberiumAgitation">
+  <LogicCommand
+    Type="SPECIAL_POWER"
+    Options="NEED_TARGET_ENEMY_OBJECT"
+    id="Command_FireTiberiumAgitation">
     <SpecialPower>SpecialPower_UseTiberiumAgitation</SpecialPower>
   </LogicCommand>
-  
- 
+
+
+  <!-- dispatch power-->
+   <!--
+  <LogicCommand
+    Options="NEED_TARGET_POS"
+    Type="SPECIAL_POWER"
+    id="Command_TeleportObjectsDispatch">
+    <SpecialPower>SpecialPower_TeleportObjectsDispatch</SpecialPower>
+  </LogicCommand>
+  <LogicCommand
+    Options="NEED_TARGET_POS"
+    Type="SPECIAL_POWER"
+    id="Command_TempRemoveEMP">
+    <SpecialPower>SpecialPower_TempRemoveEMP</SpecialPower>
+  </LogicCommand>
+-->
+
   <!--
    <LogicCommand
 		Type="SPECIAL_POWER"
@@ -78,30 +94,30 @@
   </LogicCommand>
   -->
   <LogicCommand
-		Options="NEED_TARGET_POS"
-		Type="SPECIAL_POWER"
-		id="Command_Traveler59ProdigySelectObjectsForTeleport">
+    Options="NEED_TARGET_POS"
+    Type="SPECIAL_POWER"
+    id="Command_Traveler59ProdigySelectObjectsForTeleport">
     <SpecialPower>SpecialPowerMastermindTeleportObjectSelect</SpecialPower>
   </LogicCommand>
   <LogicCommand
-		Options="NEED_TARGET_POS"
-		Type="SPECIAL_POWER"
-		id="Command_Traveler59ProdigyTeleportObjects">
+    Options="NEED_TARGET_POS"
+    Type="SPECIAL_POWER"
+    id="Command_Traveler59ProdigyTeleportObjects">
     <SpecialPower>SpecialPowerMastermindTeleportObject</SpecialPower>
   </LogicCommand>
-  
-   <LogicCommand
-		Type="PLAYER_UPGRADE"
-		id="Command_PurchaseUpgradeSTArmoryRailgunTech">
+
+  <LogicCommand
+    Type="PLAYER_UPGRADE"
+    id="Command_PurchaseUpgradeSTArmoryRailgunTech">
     <Upgrade>Upgrade_STArmoryRailgunTech</Upgrade>
   </LogicCommand>
-  
+
   <!-- cheaper mok upgrade -->
-  
-   <LogicCommand
-		Type="PLAYER_UPGRADE"
-		id="Command_PurchaseUpgradeMoKTiberiumInfusion">
+
+  <LogicCommand
+    Type="PLAYER_UPGRADE"
+    id="Command_PurchaseUpgradeMoKTiberiumInfusion">
     <Upgrade>Upgrade_MoKTiberiumInfusion</Upgrade>
   </LogicCommand>
-	
+
 </AssetDeclaration>
